@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Container,
   Divider,
@@ -9,16 +10,28 @@ import {
 const ContactForm = () => {
   return (
     <Container maxWidth="sm">
-      <div style={{ textAlign: "start", marginBottom: "20px" }}>
-        <Typography variant="h4">Contact us</Typography>
+      <Box
+        sx={{
+          textAlign: "start",
+          marginBottom: "20px",
+        }}
+      >
+        <Typography variant="h4" fontFamily="'Raleway', sans-serif">
+          Contact us
+        </Typography>
         <Divider style={{ width: "550px", margin: "auto" }} />
-      </div>
-      <Typography variant="h5" align="center" gutterBottom>
+      </Box>
+      <Typography
+        variant="h5"
+        fontFamily="'Raleway', sans-serif"
+        align="center"
+        gutterBottom
+      >
         Feel free to contact us any time. We will get back to you as soon as we
         can!
       </Typography>
-      <div
-        style={{
+      <Box
+        sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -54,21 +67,22 @@ const ContactForm = () => {
             id="message"
           />
 
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Button
               type="submit"
               variant="contained"
               style={{
                 backgroundColor: "#51583F",
                 color: "#fff",
-                width: "200px",
+                width: "550px",
+                fontFamily: "'Raleway', sans-serif",
               }}
             >
-              Submit
+              Send
             </Button>
-          </div>
+          </Box>
         </form>
-      </div>
+      </Box>
     </Container>
   );
 };
