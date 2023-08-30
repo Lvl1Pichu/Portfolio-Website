@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Box, Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
-
+import Logo from "../assets/Logo.png"
 
 const Footer: React.FC = () => {
-
     const navigate = useNavigate();
 
     const handleNavigation = (path: string) => {
@@ -12,40 +11,76 @@ const Footer: React.FC = () => {
     };
 
 
-  return (
-    <Box
-      sx={{
-        backgroundColor: "rgba(81, 88, 63, 0.57)", // Colour #51583F with 57% Opacity
-        color: "white",
-        padding: 2,
-      }}
-    >
-      <Container maxWidth="lg">
-        <Box>
-          <p></p>
+    return (
+        <Box
+            sx={{
+                height: '586px',
+                backgroundColor: "rgba(81, 88, 63, 0.56)",
+                color: "black",
+                padding: 2,
+            }}
+        >
+            <Container maxWidth={false} style={{ width: '100%' }}>
+                <Box display="flex" justifyContent="flex-end">
+                    <img src={Logo} alt="Logo" style={{ position: 'absolute', left: 95, top: 112}}></img>
+                    <Box mr={"144px"}>
+                        <Typography 
+                            variant="h6" 
+                            sx={{ marginTop: '127px', marginBottom: '43px', fontWeight: 'bold', fontSize: '30px', fontFamily: 'Raleway, sans-serif'
+                        }}
+                        >
+                            Company
+                        </Typography>
+                        <Typography 
+                            variant="body2" 
+                            sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: 'light', fontFamily: 'Raleway, sans-serif' }}
+                        >
+                            About us
+                        </Typography>
+                        <Typography 
+                            variant="body2" 
+                            sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}
+                        >
+                            Careers
+                        </Typography>
+                        <Typography 
+                            variant="body2" 
+                            onClick={() => handleNavigation('/ProjectPage')}
+                            style={{ cursor: 'pointer' }}
+                            sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}
+                        >
+                            Our Projects
+                        </Typography>
+                    </Box>
+                    <Box>
+                        <Typography 
+                            variant="h6" 
+                            sx={{ marginTop: '127px', marginBottom: '43px', fontWeight: 'bold', fontSize: '30px', fontFamily: 'Raleway, sans-serif' }}
+                        >
+                            Help
+                        </Typography>
+                        <Typography 
+                            variant="body2" 
+                            onClick={() => handleNavigation('/ContactPage')}
+                            style={{ cursor: 'pointer' }}
+                            sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}
+                        >
+                            Contact
+                        </Typography>
+                        <Typography 
+                            variant="body2" 
+                            sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}
+                        >
+                            Support
+                        </Typography>
+                        <Typography variant="body2" sx={{ fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}>
+                            Our future
+                        </Typography>
+                    </Box>
+                </Box>
+            </Container>
         </Box>
-        <Box display="flex" justifyContent="flex-end">
-          <Box mr={4}>
-            <Typography variant="h6">Company</Typography>
-            <Typography variant="body2">About us</Typography>
-            <Typography variant="body2">Careers</Typography>
-            <Typography variant="body2">Our Projects</Typography>
-          </Box>
-          <Box>
-            <Typography variant="h6">Help</Typography>
-            <Typography 
-              variant="body2" 
-              onClick={() => handleNavigation('/contact-us-page')}
-              style={{ cursor: 'pointer' }}
-            >
-              Contact
-            </Typography>            <Typography variant="body2">Support</Typography>
-            <Typography variant="body2">??????</Typography>
-          </Box>
-        </Box>
-      </Container>
-    </Box>
-  );
+    );
 };
 
 export default Footer;
