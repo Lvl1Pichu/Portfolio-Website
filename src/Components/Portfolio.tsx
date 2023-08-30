@@ -37,7 +37,7 @@ const projects = [
 function Portfolio() {
   return (
     <Container>
-      <Link
+      <Link href="/"
         sx={{
           display: 'flex',
           gap: '0.7rem',
