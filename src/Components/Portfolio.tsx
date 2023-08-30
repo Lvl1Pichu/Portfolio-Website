@@ -128,7 +128,11 @@ function Portfolio() {
                   <Typography
                     gutterBottom
                     component="div"
-                    sx={{ fontFamily: 'Raleway', fontSize: '18px' }}
+                    sx={{
+                      fontFamily: 'Raleway',
+                      fontSize: '18px',
+                      cursor: 'pointer',
+                    }}
                   >
                     {project.title}
                   </Typography>
