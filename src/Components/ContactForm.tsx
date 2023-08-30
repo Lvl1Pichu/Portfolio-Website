@@ -45,7 +45,15 @@ const ContactForm = () => {
           />
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button type="submit" variant="contained" color="primary">
+            <Button
+              type="submit"
+              variant="contained"
+              style={{
+                backgroundColor: "#51583F",
+                color: "#fff",
+                width: "400px",
+              }}
+            >
               Submit
             </Button>
           </div>
