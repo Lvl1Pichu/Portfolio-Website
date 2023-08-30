@@ -10,27 +10,27 @@ import {
 const projects = [
   {
     title: 'ZET Webshop',
-    image: './src/assets/zet.jpeg',
+    image: './src/assets/portfolio-imgs/zet.jpeg',
   },
   {
     title: 'Nordic Knots',
-    image: './src/assets/nordic.jpeg',
+    image: './src/assets/portfolio-imgs/nordic.jpeg',
   },
   {
     title: 'URoom E-commerce',
-    image: './src/assets/furniture.png',
+    image: './src/assets/portfolio-imgs/furniture.png',
   },
   {
     title: 'The Nue Co.',
-    image: './src/assets/thenue.jpeg',
+    image: './src/assets/portfolio-imgs/thenue.jpeg',
   },
   {
     title: 'Aime',
-    image: './src/assets/aime.png',
+    image: './src/assets/portfolio-imgs/aime.png',
   },
   {
     title: 'Smartly Home App',
-    image: './src/assets/smartHome.png',
+    image: './src/assets/portfolio-imgs/smartHome.png',
   },
 ];
 
