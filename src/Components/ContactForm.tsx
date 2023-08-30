@@ -1,8 +1,18 @@
-import { Button, Container, TextField, Typography } from "@mui/material";
+import {
+  Button,
+  Container,
+  Divider,
+  TextField,
+  Typography,
+} from "@mui/material";
 
 const ContactForm = () => {
   return (
     <Container maxWidth="sm">
+      <div style={{ textAlign: "start", marginBottom: "20px" }}>
+        <Typography variant="h4">Contact us</Typography>
+        <Divider style={{ width: "550px", margin: "auto" }} />
+      </div>
       <Typography variant="h5" align="center" gutterBottom>
         Feel free to contact us any time. We will get back to you as soon as we
         can!
@@ -19,7 +29,7 @@ const ContactForm = () => {
         <form>
           <TextField
             label="Name"
-            variant="standard"
+            variant="outlined"
             margin="normal"
             fullWidth
             id="name"
@@ -27,7 +37,7 @@ const ContactForm = () => {
 
           <TextField
             label="E-mail"
-            variant="standard"
+            variant="outlined"
             margin="normal"
             fullWidth
             id="email"
@@ -51,7 +61,7 @@ const ContactForm = () => {
               style={{
                 backgroundColor: "#51583F",
                 color: "#fff",
-                width: "400px",
+                width: "200px",
               }}
             >
               Submit
