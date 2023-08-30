@@ -9,17 +9,25 @@ import {
 
 const ContactForm = () => {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="lg">
       <Box
         sx={{
           textAlign: "start",
           marginBottom: "20px",
         }}
       >
-        <Typography variant="h4" fontFamily="'Oswald', regular">
+        <Typography variant="h3" fontFamily="'Oswald', regular">
           Contact us
         </Typography>
-        <Divider style={{ width: "100%", maxWidth: "550px", margin: "auto" }} />
+        <Divider
+          sx={{
+            width: "100%",
+            margin: "auto",
+            marginTop: "2%",
+            marginBottom: "8%",
+            borderBottom: "3px solid rgba(0, 0, 0, 0.999)", // Change the color and thickness as needed
+          }}
+        />
       </Box>
       <Typography
         variant="h5"
@@ -27,31 +35,48 @@ const ContactForm = () => {
         align="center"
         gutterBottom
       >
-        Feel free to contact us any time. We will get back to you as soon as we
-        can!
+        Feel free to contact us any time. <br /> We will get back to you as soon
+        as we can!
       </Typography>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "start",
           minHeight: "100vh",
+          marginTop: "40px",
         }}
       >
         <form>
+          <Box
+            sx={{
+              textAlign: "start",
+            }}
+          >
+            <Typography variant="h6" fontFamily="'Raleway', sans-serif">
+              Name
+            </Typography>
+          </Box>
           <TextField
-            label="Name"
-            variant="outlined"
+            variant="standard"
             margin="normal"
             fullWidth
             id="name"
             sx={{ width: "100%", maxWidth: "550px" }}
           />
 
+          <Box
+            sx={{
+              textAlign: "start",
+            }}
+          >
+            <Typography variant="h6" fontFamily="'Raleway', sans-serif">
+              E-mail
+            </Typography>
+          </Box>
           <TextField
-            label="E-mail"
-            variant="outlined"
+            variant="standard"
             margin="normal"
             fullWidth
             id="email"
@@ -59,13 +84,21 @@ const ContactForm = () => {
             sx={{ width: "100%", maxWidth: "550px" }}
           />
 
+          <Box
+            sx={{
+              textAlign: "start",
+            }}
+          >
+            <Typography variant="h6" fontFamily="'Raleway', sans-serif">
+              Message
+            </Typography>
+          </Box>
           <TextField
-            label="Message"
-            variant="outlined"
+            variant="standard"
             margin="normal"
             fullWidth
             multiline
-            rows={4}
+            rows={1}
             id="message"
             sx={{ width: "100%", maxWidth: "550px" }}
           />
