@@ -25,12 +25,12 @@ const projects = [
     image: './src/assets/thenue.jpeg',
   },
   {
-    title: 'Task & Project App',
-    image: './src/assets/smarttask.png',
+    title: 'Aime',
+    image: './src/assets/aime.png',
   },
   {
     title: 'Smartly Home App',
-    image: './src/assets/smartly.png',
+    image: './src/assets/smartHome.png',
   },
 ];
 
