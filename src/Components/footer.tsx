@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         >
             <Container maxWidth={false} style={{ width: '100%' }}>
                 <Box display="flex" justifyContent="flex-end">
-                    <img src={Logo} alt="Logo" style={{ position: 'absolute', left: 95, top: 112}}></img>
+                    {/* <img src={Logo} alt="Logo" style={{ position: 'absolute', left: 95, top: 112}}></img> */}
                     <Box mr={"144px"}>
                         <Typography 
                             variant="h6" 
