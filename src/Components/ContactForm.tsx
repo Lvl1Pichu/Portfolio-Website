@@ -44,9 +44,11 @@ const ContactForm = () => {
             id="message"
           />
 
-          <Button type="submit" variant="contained" color="primary">
-            Submit
-          </Button>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button type="submit" variant="contained" color="primary">
+              Submit
+            </Button>
+          </div>
         </form>
       </div>
     </Container>
