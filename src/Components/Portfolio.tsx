@@ -1,13 +1,4 @@
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Container,
-  Grid,
-  Typography,
-} from '@mui/material';
+import { Box, CardMedia, Container, Grid, Typography } from '@mui/material';
 
 const projects = [
   {
@@ -39,34 +30,44 @@ const projects = [
 function Portfolio() {
   return (
     <Container>
-      <Box sx={{ width: '100%' }}>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2 }}>
+      <Box
+        sx={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: '5rem',
+        }}
+      >
+        <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 4 }}>
           {projects.map((project) => (
-            <Grid key={project.title} item xs={12} sm={6} md={4} lg={3}>
-              <Card>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={project.image}
-                    alt="Project Image"
-                    sx={{
-                      width: '100%',
-                      height: '300px',
-                      objectFit: 'cover',
-                    }}
-                  />
-                  <CardContent sx={{ textAlign: 'center' }}>
-                    <Typography
-                      gutterBottom
-                      component="div"
-                      sx={{ fontFamily: 'Raleway', fontSize: '18px' }}
-                    >
-                      {project.title}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+            <Grid key={project.title} item xs={12} sm={6} md={6} lg={6}>
+              <CardMedia
+                component="img"
+                height="140"
+                image={project.image}
+                alt="Project Image"
+                sx={{
+                  width: '100%',
+                  height: '500px',
+                  objectFit: 'cover',
+                }}
+              />
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginTop: '1rem',
+                }}
+              >
+                <Typography
+                  gutterBottom
+                  component="div"
+                  sx={{ fontFamily: 'Raleway', fontSize: '18px' }}
+                >
+                  {project.title}
+                </Typography>
+              </Box>
             </Grid>
           ))}
         </Grid>
@@ -76,6 +77,19 @@ function Portfolio() {
 }
 
 export default Portfolio;
+
+// <Card sx={{ width: '80%' }}>
+
+// <CardContent sx={{ textAlign: 'center' }}>
+//   <Typography
+//     gutterBottom
+//     component="div"
+//     sx={{ fontFamily: 'Raleway', fontSize: '18px' }}
+//   >
+//     {project.title}
+//   </Typography>
+// </CardContent>
+// </Card>
 
 // const Item = styled(Paper)(({ theme }) => ({
 //   ...theme.typography.subtitle2,
@@ -94,3 +108,21 @@ export default Portfolio;
 //     objectFit: 'cover',
 //   },
 // }));
+
+// <ImageList sx={{ width: 500, height: 450 }}>
+// {itemData.map((item) => (
+//   <ImageListItem key={item.img}>
+//     <img
+//       src={`${item.img}?w=248&fit=crop&auto=format`}
+//       srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+//       alt={item.title}
+//       loading="lazy"
+//     />
+//     <ImageListItemBar
+//       title={item.title}
+//       subtitle={<span>by: {item.author}</span>}
+//       position="below"
+//     />
+//   </ImageListItem>
+// ))}
+// </ImageList>
