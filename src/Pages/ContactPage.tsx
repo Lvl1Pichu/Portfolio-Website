@@ -1,14 +1,15 @@
-import React from 'react';
-import Footer from '../Components/footer'; // Adjust the path as needed based on your project structure
-
+import React from "react";
+import ContactForm from "../Components/ContactForm";
 
 const ContactPage: React.FC = () => {
-    return (
-      <>
-        <header></header>
-        <main></main>
-        <footer><Footer></Footer></footer>
-      </>
+  return (
+    <>
+      <header></header>
+      <main>
+        <ContactForm />
+      </main>
+      {/* <footer><Footer></Footer></footer> */}
+    </>
   );
 };
 
