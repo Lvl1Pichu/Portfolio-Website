@@ -29,8 +29,19 @@ const projects = [
 
 function Portfolio() {
   return (
-    <Container sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Typography variant='h2' sx={{ fontFamily: "Oswald"}}>Projects</Typography>
+    <Container
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Box sx={{ width: '100%', borderBottom: '0.15rem solid black', marginBottom: "5rem", paddingBottom: "1rem" }}>
+        <Typography variant="h2" sx={{ fontFamily: 'Oswald' }}>
+          Projects
+        </Typography>
+      </Box>
       <Box
         sx={{
           width: '85%',
