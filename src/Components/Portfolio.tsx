@@ -56,7 +56,7 @@ function Portfolio() {
         <img
           src="./src/assets/arrowLeft.png"
           alt="arrow"
-          style={{ height: '10px' }}
+          style={{ height: '0.6rem' }}
         />
         <Typography
           sx={{
@@ -109,8 +109,13 @@ function Portfolio() {
                   alt="Project Image"
                   sx={{
                     width: '100%',
-                    height: '550px',
+                    height: '35rem',
                     objectFit: 'cover',
+                    cursor: 'pointer',
+                    boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                    '&:hover': {
+                      borderRadius: '2rem',
+                    },
                   }}
                 />
                 <Box
