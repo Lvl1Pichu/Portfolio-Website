@@ -13,24 +13,24 @@ const projects = [
     image: './src/assets/zet.jpeg',
   },
   {
-    title: 'Smartly Home App',
-    image: './src/assets/smartly.png',
-  },
-  {
     title: 'Nordic Knots',
     image: './src/assets/nordic.jpeg',
+  },
+  {
+    title: 'URoom E-commerce',
+    image: './src/assets/furniture.png',
   },
   {
     title: 'The Nue Co.',
     image: './src/assets/thenue.jpeg',
   },
   {
-    title: 'Haus E-commerce',
-    image: './src/assets/Haus.jpeg',
-  },
-  {
     title: 'Task & Project App',
     image: './src/assets/smarttask.png',
+  },
+  {
+    title: 'Smartly Home App',
+    image: './src/assets/smartly.png',
   },
 ];
 
@@ -89,7 +89,7 @@ function Portfolio() {
         </Box>
         <Box
           sx={{
-            width: '85%',
+            width: '100%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -102,14 +102,14 @@ function Portfolio() {
             columnSpacing={{ xs: 1, sm: 3, md: 5 }}
           >
             {projects.map((project) => (
-              <Grid key={project.title} item xs={12} sm={6} md={6}>
+              <Grid key={project.title} item xs={12} sm={6} md={4}>
                 <CardMedia
                   component="img"
                   image={project.image}
                   alt="Project Image"
                   sx={{
                     width: '100%',
-                    height: '35rem',
+                    height: '32rem',
                     objectFit: 'cover',
                     cursor: 'pointer',
                     boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
