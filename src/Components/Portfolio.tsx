@@ -29,27 +29,27 @@ const projects = [
 
 function Portfolio() {
   return (
-    <Container>
+    <Container sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Typography variant='h2' sx={{ fontFamily: "Oswald"}}>Projects</Typography>
       <Box
         sx={{
-          width: '100%',
+          width: '85%',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           marginBottom: '5rem',
         }}
       >
-        <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 4 }}>
+        <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 3, md: 5 }}>
           {projects.map((project) => (
-            <Grid key={project.title} item xs={12} sm={6} md={6} lg={6}>
+            <Grid key={project.title} item xs={12} sm={6} md={6}>
               <CardMedia
                 component="img"
-                height="140"
                 image={project.image}
                 alt="Project Image"
                 sx={{
                   width: '100%',
-                  height: '500px',
+                  height: '550px',
                   objectFit: 'cover',
                 }}
               />
