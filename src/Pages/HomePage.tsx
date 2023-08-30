@@ -1,11 +1,12 @@
 import React from 'react';
 import Footer from '../Components/footer'; // Adjust the path as needed based on your project structure
+import FindUsComponent from '../Components/FindUsComponent';
 
 const HomePage: React.FC = () => {
     return (
       <>
         <header></header>
-        <main></main>
+        <main><FindUsComponent></FindUsComponent></main>
         <footer>
             <Footer />
         </footer>
