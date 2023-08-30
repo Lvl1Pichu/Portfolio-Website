@@ -11,7 +11,7 @@ function TeamSection() {
         fontFamily: 'Raleway',
       }}
     >
-      <Box component="h1" sx={{ fontSize: '64px' }}>
+      <Box component="h1" sx={{ fontSize: '64px', fontFamily: 'Oswald' }}>
         The team
       </Box>
       <hr style={{ marginBottom: '2rem' }} />
@@ -43,7 +43,12 @@ function TeamSection() {
           >
             <Box
               component="h2"
-              sx={{ fontSize: '40px', margin: '0', color: '#522E07' }}
+              sx={{
+                fontSize: '40px',
+                margin: '0',
+                color: '#522E07',
+                fontFamily: 'Oswald',
+              }}
             >
               Jenny Weijland
             </Box>
@@ -95,7 +100,12 @@ function TeamSection() {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <Box
               component="h2"
-              sx={{ fontSize: '40px', margin: '0', color: '#522E07' }}
+              sx={{
+                fontSize: '40px',
+                margin: '0',
+                color: '#522E07',
+                fontFamily: 'Oswald',
+              }}
             >
               Carl Hasselblad
             </Box>
@@ -150,7 +160,12 @@ function TeamSection() {
           >
             <Box
               component="h2"
-              sx={{ fontSize: '40px', margin: '0', color: '#522E07' }}
+              sx={{
+                fontSize: '40px',
+                margin: '0',
+                color: '#522E07',
+                fontFamily: 'Oswald',
+              }}
             >
               Sebastian Johansson
             </Box>
@@ -210,7 +225,12 @@ function TeamSection() {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <Box
               component="h2"
-              sx={{ fontSize: '40px', margin: '0', color: '#522E07' }}
+              sx={{
+                fontSize: '40px',
+                margin: '0',
+                color: '#522E07',
+                fontFamily: 'Oswald',
+              }}
             >
               Linus Hammarberg
             </Box>
@@ -265,7 +285,12 @@ function TeamSection() {
           >
             <Box
               component="h2"
-              sx={{ fontSize: '40px', margin: '0', color: '#522E07' }}
+              sx={{
+                fontSize: '40px',
+                margin: '0',
+                color: '#522E07',
+                fontFamily: 'Oswald',
+              }}
             >
               Nathalie Gustafsson
             </Box>
