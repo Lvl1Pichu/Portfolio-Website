@@ -19,7 +19,7 @@ const ContactForm = () => {
         <Typography variant="h4" fontFamily="'Oswald', regular">
           Contact us
         </Typography>
-        <Divider style={{ width: "550px", margin: "auto" }} />
+        <Divider style={{ width: "100%", maxWidth: "550px", margin: "auto" }} />
       </Box>
       <Typography
         variant="h5"
@@ -46,6 +46,7 @@ const ContactForm = () => {
             margin="normal"
             fullWidth
             id="name"
+            sx={{ width: "100%", maxWidth: "550px" }}
           />
 
           <TextField
@@ -55,6 +56,7 @@ const ContactForm = () => {
             fullWidth
             id="email"
             type="email"
+            sx={{ width: "100%", maxWidth: "550px" }}
           />
 
           <TextField
@@ -65,16 +67,18 @@ const ContactForm = () => {
             multiline
             rows={4}
             id="message"
+            sx={{ width: "100%", maxWidth: "550px" }}
           />
 
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Button
               type="submit"
               variant="contained"
-              style={{
+              sx={{
                 backgroundColor: "#51583F",
                 color: "#fff",
-                width: "550px",
+                width: "100%",
+                maxWidth: "550px",
                 fontFamily: "'Raleway', sans-serif",
               }}
             >
