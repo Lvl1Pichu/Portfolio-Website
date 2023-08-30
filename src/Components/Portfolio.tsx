@@ -7,28 +7,53 @@ import {
   Typography,
 } from '@mui/material';
 
+const projects = [
+  {
+    title: 'ZET Webshop',
+    image: './src/assets/zet.jpeg',
+  },
+  {
+    title: 'Smartly Home App',
+    image: './src/assets/smartly.png',
+  },
+  {
+    title: 'Nordic Knots',
+    image: './src/assets/nordic.jpeg',
+  },
+  {
+    title: 'The Nue Co.',
+    image: './src/assets/thenue.jpeg',
+  },
+  {
+    title: 'NueAesthetic Webshop',
+    image: './src/assets/nueAst.png',
+  },
+  {
+    title: 'Task & Project Management App',
+    image: './src/assets/smarttask.png',
+  },
+];
+
 function Portfolio() {
   return (
     <Container>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
-            alt="green iguana"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
+      {projects.map((project) => (
+        <Card key={project.title} sx={{ maxWidth: 345 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image={project.image}
+              alt="Project Image"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {project.title}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      ))}
     </Container>
   );
 }
