@@ -26,6 +26,7 @@ export default function MobileMenu() {
         maxWidth: "900px",
         width: "100%",
         boxSizing: "border-box",
+        zIndex: 10,
       }}
     >
       <Box>
