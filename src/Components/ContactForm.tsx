@@ -16,7 +16,7 @@ const ContactForm = () => {
           marginBottom: "20px",
         }}
       >
-        <Typography variant="h4" fontFamily="'Raleway', sans-serif">
+        <Typography variant="h4" fontFamily="'Oswald', regular">
           Contact us
         </Typography>
         <Divider style={{ width: "550px", margin: "auto" }} />
