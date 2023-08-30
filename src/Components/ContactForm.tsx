@@ -53,62 +53,56 @@ const ContactForm = () => {
         }}
       >
         <form>
-          {/* Name */}
-          <Box
-            sx={{
-              textAlign: "start",
-              width: "100%",
-            }}
+          {/* <Typography
+            variant="h6"
+            textAlign="start"
+            fontFamily="'Raleway', sans-serif"
           >
-            <Typography variant="h6" fontFamily="'Raleway', sans-serif">
-              Name
-            </Typography>
-          </Box>
+            Name
+          </Typography> */}
+
           <TextField
             variant="standard"
+            label="Name"
             margin="normal"
             fullWidth
             id="name"
             sx={{ width: "100%" }}
           />
 
-          <Box
-            sx={{
-              textAlign: "start",
-              // width: "100%",
-            }}
+          {/* <Typography
+            variant="h6"
+            textAlign="start"
+            fontFamily="'Raleway', sans-serif"
           >
-            <Typography variant="h6" fontFamily="'Raleway', sans-serif">
-              E-mail
-            </Typography>
-          </Box>
+            E-mail
+          </Typography> */}
+
           <TextField
             variant="standard"
+            label="E-mail"
             margin="normal"
             fullWidth
             id="email"
             type="email"
-            // sx={{ width: "100%" }}
           />
 
-          <Box
-            sx={{
-              textAlign: "start",
-              // width: "100%",
-            }}
+          {/* <Typography
+            variant="h6"
+            textAlign="start"
+            fontFamily="'Raleway', sans-serif"
           >
-            <Typography variant="h6" fontFamily="'Raleway', sans-serif">
-              Message
-            </Typography>
-          </Box>
+            Message
+          </Typography> */}
+
           <TextField
             variant="standard"
+            label="Message"
             margin="normal"
             fullWidth
             multiline
             rows={1}
             id="message"
-            // sx={{ width: "100%" }}
           />
 
           <Box sx={{ display: "flex", justifyContent: "center" }}>
