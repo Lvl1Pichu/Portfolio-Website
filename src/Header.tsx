@@ -12,7 +12,7 @@ export default function HeaderSection() {
         position: "relative",
         width: "100%",
         height: "900px",
-        backgroundImage: "url('../src/assets/tree.jpeg')",
+        backgroundImage: "url('../src/assets/tree_dark.jpg')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
