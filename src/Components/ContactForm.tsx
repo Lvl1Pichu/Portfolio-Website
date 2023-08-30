@@ -113,8 +113,8 @@ const ContactForm = () => {
                 backgroundColor: "#51583F",
                 color: "#fff",
                 width: "100%",
-                maxWidth: "550px",
                 fontFamily: "'Raleway', sans-serif",
+                marginTop: "20px",
               }}
             >
               Send
