@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import MenuBar from "./Menu";
 
 export default function HeaderSection() {
   return (
@@ -6,15 +7,17 @@ export default function HeaderSection() {
       sx={{
         width: "100%",
         height: "700px",
-        backgroundImage: "url('../src/assets/bg.jpg')",
+        backgroundImage: "url('../src/assets/tree.jpeg')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-
         fontWeight: "700",
         textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
-      Meny{" "}
+      <MenuBar />
     </Box>
   );
 }
