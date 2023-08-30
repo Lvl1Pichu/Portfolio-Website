@@ -1,4 +1,4 @@
-import HeaderSection from "../Header";
+import HeaderSection from "../Components/Header";
 
 export default function Home() {
   return (
