@@ -19,25 +19,29 @@ const ContactForm = () => {
         <Typography variant="h3" fontFamily="'Oswald', regular">
           Contact us
         </Typography>
+
         <Divider
           sx={{
             width: "100%",
             margin: "auto",
             marginTop: "2%",
             marginBottom: "8%",
-            borderBottom: "3px solid rgba(0, 0, 0, 0.999)", // Change the color and thickness as needed
+            borderBottom: "3px solid rgba(0, 0, 0, 0.999)",
           }}
         />
       </Box>
+
       <Typography
         variant="h5"
         fontFamily="'Raleway', sans-serif"
         align="center"
         gutterBottom
       >
-        Feel free to contact us any time. <br /> We will get back to you as soon
-        as we can!
+        Feel free to contact us any time. <br />
+        We will get back to you as soon as we can!
       </Typography>
+
+      {/* Formuläret */}
       <Box
         sx={{
           display: "flex",
@@ -49,9 +53,11 @@ const ContactForm = () => {
         }}
       >
         <form>
+          {/* Name */}
           <Box
             sx={{
               textAlign: "start",
+              width: "100%",
             }}
           >
             <Typography variant="h6" fontFamily="'Raleway', sans-serif">
@@ -63,12 +69,13 @@ const ContactForm = () => {
             margin="normal"
             fullWidth
             id="name"
-            sx={{ width: "100%", maxWidth: "550px" }}
+            sx={{ width: "100%" }}
           />
 
           <Box
             sx={{
               textAlign: "start",
+              // width: "100%",
             }}
           >
             <Typography variant="h6" fontFamily="'Raleway', sans-serif">
@@ -81,12 +88,13 @@ const ContactForm = () => {
             fullWidth
             id="email"
             type="email"
-            sx={{ width: "100%", maxWidth: "550px" }}
+            // sx={{ width: "100%" }}
           />
 
           <Box
             sx={{
               textAlign: "start",
+              // width: "100%",
             }}
           >
             <Typography variant="h6" fontFamily="'Raleway', sans-serif">
@@ -100,7 +108,7 @@ const ContactForm = () => {
             multiline
             rows={1}
             id="message"
-            sx={{ width: "100%", maxWidth: "550px" }}
+            // sx={{ width: "100%" }}
           />
 
           <Box sx={{ display: "flex", justifyContent: "center" }}>
