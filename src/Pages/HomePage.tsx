@@ -1,7 +1,32 @@
 import React from "react";
 import FindUsComponent from "../Components/FindUsComponent";
 import HeaderSection from "../Components/Header";
-import Footer from "../Components/footer"; // Adjust the path as needed based on your project structure
+import Footer from "../Components/footer"; 
+import CompetenceCard from "../Components/CompetenceCardComponent";
+import treePic from "../assets/tree.jpeg"
+
+const cardData = [
+  {
+    imgSrc: {treePic},
+    title: "Title 1",
+    text: "This is the text for the first card."
+  },
+  {
+    imgSrc: {treePic} ,
+    title: "Title 2",
+    text: "This is the text for the second card."
+  },
+  {
+    imgSrc: {treePic},
+    title: "Title 3",
+    text: "This is the text for the third card."
+  },
+  {
+    imgSrc: {treePic},
+    title: "Title 4",
+    text: "This is the text for the fourth card."
+  }
+];
 
 const HomePage: React.FC = () => {
   return (
@@ -10,7 +35,15 @@ const HomePage: React.FC = () => {
         <HeaderSection />
       </header>
       <main>
-        <FindUsComponent></FindUsComponent>
+        {cardData.map((card, index) => (
+          <CompetenceCard
+            key={index}
+            imageSrc={treePic}
+            title={card.title}
+            description={card.text}
+          />
+        ))}
+        <FindUsComponent />
       </main>
       <footer>
         <Footer />
