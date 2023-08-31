@@ -3,11 +3,23 @@ import {
   Button,
   Container,
   Divider,
+  Modal,
   TextField,
   Typography,
 } from "@mui/material";
+import { useState } from "react";
 
 const ContactForm = () => {
+  const [open, setOpen] = useState(false); // State to manage modal open/close
+
+  const handleOpen = () => {
+    setOpen(true); // Open the modal
+  };
+
+  const handleClose = () => {
+    setOpen(false); // Close the modal
+  };
+
   return (
     <Container maxWidth="lg">
       <Box
@@ -60,7 +72,7 @@ const ContactForm = () => {
             fullWidth
             id="name"
             sx={{ width: "100%" }}
-            autoFocus
+            required
           />
 
           <TextField
@@ -70,6 +82,7 @@ const ContactForm = () => {
             fullWidth
             id="email"
             type="email"
+            required
           />
 
           <TextField
@@ -80,10 +93,12 @@ const ContactForm = () => {
             multiline
             rows={1}
             id="message"
+            required
           />
 
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Button
+              onClick={handleOpen}
               type="submit"
               variant="contained"
               sx={{
@@ -99,6 +114,23 @@ const ContactForm = () => {
             >
               Send
             </Button>
+
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <Box>
+                <Typography id="modal-modal-title" variant="h6" component="h2">
+                  Text in a modal
+                </Typography>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  Duis mollis, est non commodo luctus, nisi erat porttitor
+                  ligula.
+                </Typography>
+              </Box>
+            </Modal>
           </Box>
         </form>
       </Box>
