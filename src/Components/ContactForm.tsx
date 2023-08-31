@@ -89,13 +89,17 @@ const ContactForm = () => {
               type="submit"
               variant="contained"
               sx={{
+                boxShadow: "0 .125rem .625rem rgba(0, 0, 0, 0.2)",
                 backgroundColor: "#51583F",
                 color: "#fff",
+                borderRadius: "0",
                 width: "100%",
                 fontFamily: "'Raleway', sans-serif",
                 marginTop: "20px",
                 "&:hover": {
                   backgroundColor: "#6C784E",
+                  boxShadow: "0 .25rem 1.1rem rgba(0, 0, 0, 0.4)",
+                  borderRadius: "2rem",
                 },
               }}
             >
