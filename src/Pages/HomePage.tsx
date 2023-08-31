@@ -1,17 +1,20 @@
+
 import React from "react";
 import ContactForm from "../Components/ContactForm";
 import FindUsComponent from "../Components/FindUsComponent";
 import HeaderSection from "../Components/Header";
-import Footer from "../Components/footer"; // Adjust the path as needed based on your project structure
+import TeamSection from '../Components/TeamSection';
+import Footer from "../Components/footer";
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <header>
+    <header>
         <HeaderSection />
-      </header>
-      <main>
-        <FindUsComponent></FindUsComponent>
+     </header>      
+     <main>
+        <TeamSection />
+        <FindUsComponent />
         <ContactForm />
       </main>
       <footer>
