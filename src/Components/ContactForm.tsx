@@ -68,6 +68,7 @@ const ContactForm = () => {
             fullWidth
             id="name"
             sx={{ width: "100%" }}
+            autoFocus
           />
 
           {/* <Typography
