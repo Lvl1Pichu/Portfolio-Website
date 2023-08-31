@@ -116,6 +116,9 @@ const ContactForm = () => {
                 width: "100%",
                 fontFamily: "'Raleway', sans-serif",
                 marginTop: "20px",
+                "&:hover": {
+                  backgroundColor: "#6C784E",
+                },
               }}
             >
               Send
