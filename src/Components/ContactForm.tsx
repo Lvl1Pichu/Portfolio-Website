@@ -53,14 +53,6 @@ const ContactForm = () => {
         }}
       >
         <form>
-          {/* <Typography
-            variant="h6"
-            textAlign="start"
-            fontFamily="'Raleway', sans-serif"
-          >
-            Name
-          </Typography> */}
-
           <TextField
             variant="standard"
             label="Name"
@@ -71,14 +63,6 @@ const ContactForm = () => {
             autoFocus
           />
 
-          {/* <Typography
-            variant="h6"
-            textAlign="start"
-            fontFamily="'Raleway', sans-serif"
-          >
-            E-mail
-          </Typography> */}
-
           <TextField
             variant="standard"
             label="E-mail"
@@ -87,14 +71,6 @@ const ContactForm = () => {
             id="email"
             type="email"
           />
-
-          {/* <Typography
-            variant="h6"
-            textAlign="start"
-            fontFamily="'Raleway', sans-serif"
-          >
-            Message
-          </Typography> */}
 
           <TextField
             variant="standard"
