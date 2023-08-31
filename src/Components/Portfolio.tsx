@@ -37,7 +37,8 @@ const projects = [
 function Portfolio() {
   return (
     <Container>
-      <Link href="/"
+      <Link
+        href="/"
         sx={{
           display: 'flex',
           gap: '0.7rem',
@@ -84,7 +85,7 @@ function Portfolio() {
           }}
         >
           <Typography variant="h2" sx={{ fontFamily: 'Oswald' }}>
-            Projects
+            Portfolio
           </Typography>
         </Box>
         <Box
