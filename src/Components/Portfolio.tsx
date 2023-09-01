@@ -84,7 +84,10 @@ function Portfolio() {
             paddingBottom: '1rem',
           }}
         >
-          <Typography variant="h2" sx={{ fontFamily: 'Oswald' }}>
+          <Typography
+            variant="h2"
+            sx={{ fontFamily: 'Oswald', fontWeight: '400' }}
+          >
             Portfolio
           </Typography>
         </Box>
@@ -102,7 +105,7 @@ function Portfolio() {
             rowSpacing={5}
             columnSpacing={{ xs: 1, sm: 3, md: 5 }}
           >
-            {projects.map((project) => (
+            {projects.map(project => (
               <Grid key={project.title} item xs={12} sm={6} md={4}>
                 <CardMedia
                   component="img"

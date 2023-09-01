@@ -1,8 +1,8 @@
-import { Box, Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 function TeamSection() {
   return (
-    <Container
+    <Box
       sx={{
         '@media (max-width:400px)': {
           padding: '0',
@@ -11,10 +11,26 @@ function TeamSection() {
         fontFamily: 'Raleway',
       }}
     >
-      <Box component="h1" sx={{ fontSize: '64px', fontFamily: 'Oswald' }}>
+      {/* <Box component="h1" sx={{ fontSize: '64px', fontFamily: 'Oswald' }}>
         The team
       </Box>
-      <hr style={{ marginBottom: '2rem' }} />
+      <hr style={{ marginBottom: '2rem' }} /> */}
+      <Box
+        sx={{
+          width: '100%',
+          borderBottom: '0.15rem solid black',
+          marginBottom: '5rem',
+          paddingBottom: '1rem',
+          marginTop: '5rem',
+        }}
+      >
+        <Typography
+          variant="h1"
+          sx={{ fontFamily: 'Oswald', fontWeight: '400' }}
+        >
+          The team
+        </Typography>
+      </Box>
 
       {/* Person 1 */}
 
@@ -22,7 +38,7 @@ function TeamSection() {
         sx={{
           display: 'flex',
           gap: '2rem',
-          marginTop: '4rem',
+          marginBottom: '5rem',
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
@@ -84,6 +100,7 @@ function TeamSection() {
           display: 'flex',
           gap: '2rem',
           marginTop: '4rem',
+          marginBottom: '5rem',
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
@@ -140,6 +157,7 @@ function TeamSection() {
           display: 'flex',
           gap: '2rem',
           marginTop: '4rem',
+          marginBottom: '5rem',
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
@@ -209,6 +227,7 @@ function TeamSection() {
           display: 'flex',
           gap: '2rem',
           marginTop: '4rem',
+          marginBottom: '5rem',
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
@@ -265,6 +284,7 @@ function TeamSection() {
           display: 'flex',
           gap: '2rem',
           marginTop: '4rem',
+          marginBottom: '5rem',
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
@@ -325,7 +345,7 @@ function TeamSection() {
           <img src="nathalie.png" alt="" />
         </Box>
       </Box>
-    </Container>
+    </Box>
   );
 }
 
