@@ -52,7 +52,20 @@ export default function MenuBar() {
         </Link>
       </Box>
 
-      <Link href="#" color="inherit" underline="hover">
+      <Link href="#contact-section" color="inherit" underline="hover"
+         onClick={(e) => {
+          e.preventDefault(); // Prevent the default link behavior
+
+          const contactSection = document.getElementById("contact-section"); // Get the target section by id
+
+          if (contactSection) {
+            contactSection.scrollIntoView({
+              behavior: "smooth", // Optional: Add smooth scrolling effect
+              block: "start",     // Optional: Scroll to the top of the target element
+            });
+          }
+        }}
+      >
         Contact us
       </Link>
     </Box>
