@@ -2,6 +2,16 @@ import { Box, Container } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function TeamSection() {
+  const imageStyles = {
+    boxShadow: "0 .125rem .625rem rgba(0, 0, 0, 0.2)",
+    transition: "all 0.3s",
+    "&:hover": {
+      boxShadow: "0 .25rem 1.1rem rgba(0, 0, 0, 0.4)",
+      borderRadius: "2rem",
+    },
+  };
+
+
   return (
     <Container
       sx={{
@@ -69,11 +79,25 @@ function TeamSection() {
             {" "}
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
             <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
-            <Link to={`/detailsPage/Jenny`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
+              <Link
+                to={`/detailsPage/Jenny`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
             </Box>
           </Box>
         </Box>
-        <Box sx={{ "@media (max-width:768px)": { margin: "0 auto" } }}>
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
           <img src="jenny.png" alt="" />
         </Box>
       </Box>
@@ -88,8 +112,13 @@ function TeamSection() {
           "@media (max-width:768px)": { flexDirection: "column" },
         }}
       >
-        <Box sx={{ "@media (max-width:768px)": { margin: "0 auto" } }}>
-          <img style={{ objectFit: "cover" }} src="carl.png" alt="" />
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
+          <img style={{ objectFit: "cover", }} src="carl.png" alt="" />
         </Box>
         <Box
           sx={{
@@ -128,7 +157,16 @@ function TeamSection() {
             {" "}
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
             <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
-            <Link to={`/detailsPage/Carl`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
+              <Link
+                to={`/detailsPage/Carl`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
             </Box>
           </Box>
         </Box>
@@ -188,11 +226,25 @@ function TeamSection() {
             {" "}
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
             <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
-            <Link to={`/detailsPage/Sebastian`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
+              <Link
+                to={`/detailsPage/Sebastian`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
             </Box>
           </Box>
         </Box>
-        <Box sx={{ "@media (max-width:768px)": { margin: "0 auto" } }}>
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
           <img src="sebbe.png" alt="" />
         </Box>
       </Box>
@@ -207,7 +259,12 @@ function TeamSection() {
           "@media (max-width:768px)": { flexDirection: "column" },
         }}
       >
-        <Box sx={{ "@media (max-width:768px)": { margin: "0 auto" } }}>
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
           <img style={{ objectFit: "cover" }} src="linus.png" alt="" />
         </Box>
         <Box
@@ -247,7 +304,16 @@ function TeamSection() {
             {" "}
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
             <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
-              <Link to={`/detailsPage/Linus`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
+              <Link
+                to={`/detailsPage/Linus`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
             </Box>
           </Box>
         </Box>
@@ -305,12 +371,28 @@ function TeamSection() {
           <Box>
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
             <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
-              <Link to={`/detailsPage/Nathalie`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
+              <Link
+                to={`/detailsPage/Nathalie`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
             </Box>{" "}
           </Box>
         </Box>
-        <Box sx={{ "@media (max-width:768px)": { margin: "0 auto" } }}>
-          <img src="nathalie.png" alt="" />
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
+          <img src="nathalie.png" alt="" style={{
+            ...imageStyles }
+          } />
         </Box>
       </Box>
     </Container>
