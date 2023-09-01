@@ -15,7 +15,7 @@ const ContactForm = () => {
           textAlign: "start",
           marginBottom: "20px",
         }}
-        id="contact-section" // Add an id to this section
+        id="contact-section" 
       >
         <Typography variant="h3" fontFamily="'Oswald', regular">
           Contact us
