@@ -21,6 +21,7 @@ function TeamSection() {
         },
         fontFamily: "Raleway",
       }}
+      id="team-section" 
     >
       <Box component="h1" sx={{ fontSize: "64px", fontFamily: "Oswald" }}>
         The team
