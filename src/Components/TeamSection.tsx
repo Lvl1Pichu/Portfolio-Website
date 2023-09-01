@@ -2,7 +2,6 @@ import { Box, Container } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function TeamSection() {
-
   return (
     <Container
       sx={{
@@ -70,7 +69,7 @@ function TeamSection() {
             {" "}
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
             <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
-              READ MORE!
+            <Link to={`/detailsPage/Jenny`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
             </Box>
           </Box>
         </Box>
@@ -129,7 +128,7 @@ function TeamSection() {
             {" "}
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
             <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
-              READ MORE!
+            <Link to={`/detailsPage/Carl`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
             </Box>
           </Box>
         </Box>
@@ -188,14 +187,8 @@ function TeamSection() {
           <Box>
             {" "}
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
-            <Box
-              component="span"
-              sx={{
-                fontSize: "20px",
-                cursor: "pointer",
-              }}
-            >
-              READ MORE!
+            <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
+            <Link to={`/detailsPage/Sebastian`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
             </Box>
           </Box>
         </Box>
@@ -254,7 +247,7 @@ function TeamSection() {
             {" "}
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
             <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
-              READ MORE!
+              <Link to={`/detailsPage/Linus`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
             </Box>
           </Box>
         </Box>
@@ -311,7 +304,9 @@ function TeamSection() {
           </Box>
           <Box>
             <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
-            <Link to={`/detailsPage/Nathalie`}>READ MORE about Nathalie!</Link>
+            <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
+              <Link to={`/detailsPage/Nathalie`} style={{fontSize: '20px', color: 'black', textDecoration: 'none'}}>READ MORE!</Link>
+            </Box>{" "}
           </Box>
         </Box>
         <Box sx={{ "@media (max-width:768px)": { margin: "0 auto" } }}>
