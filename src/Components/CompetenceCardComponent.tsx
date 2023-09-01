@@ -14,7 +14,9 @@ const CompetenceCard: React.FC<CompetenceCardProps> = ({ imageSrc, title, descri
         maxWidth: '1074px',
         display: 'flex',
         alignItems: 'center',
-        gap: '20px'
+        gap: '34px',
+        marginLeft: "auto",
+        marginRight: "auto"
       }}
     >
       {/* Image */}
@@ -47,7 +49,7 @@ const CompetenceCard: React.FC<CompetenceCardProps> = ({ imageSrc, title, descri
         <Typography variant="h5" sx={{ fontFamily: 'Raleway, sans-serif', fontWeight: 'bold' }}>
           {title}
         </Typography>
-        <Typography sx={{ fontFamily: 'Raleway, sans-serif', fontWeight: '300' }}>
+        <Typography sx={{ fontFamily: 'Raleway, sans-serif', fontWeight: '300', wordWrap: "break-word", maxWidth: "690px" }}>
           {description}
         </Typography>
       </Box>

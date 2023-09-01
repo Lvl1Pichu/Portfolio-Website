@@ -9,12 +9,12 @@ const cardData = [
   {
     imgSrc: {treePic},
     title: "Title 1",
-    text: "This is the text for the first card."
+    text: "Discover Jenny's realm: an adept in TypeScript, a maven in UX, and a PHP enthusiast. Merging her love for nature with digital landscapes, she crafts experiences as serene as a woodland trail."
   },
   {
     imgSrc: {treePic} ,
     title: "Title 2",
-    text: "This is the text for the second card."
+    text: "This "
   },
   {
     imgSrc: {treePic},
