@@ -11,10 +11,6 @@ function TeamSection() {
         fontFamily: 'Raleway',
       }}
     >
-      {/* <Box component="h1" sx={{ fontSize: '64px', fontFamily: 'Oswald' }}>
-        The team
-      </Box>
-      <hr style={{ marginBottom: '2rem' }} /> */}
       <Box
         sx={{
           width: '100%',
@@ -25,7 +21,7 @@ function TeamSection() {
         }}
       >
         <Typography
-          variant="h1"
+          variant="h2"
           sx={{ fontFamily: 'Oswald', fontWeight: '400' }}
         >
           The team

@@ -117,9 +117,11 @@ function Portfolio() {
                     objectFit: 'cover',
                     cursor: 'pointer',
                     boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                    transition: '0.15s',
                     '&:hover': {
                       boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
                       borderRadius: '2rem',
+                      transition: '0.15s',
                     },
                   }}
                 />

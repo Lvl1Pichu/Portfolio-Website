@@ -10,6 +10,7 @@ const MapComponent: React.FC = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        marginBottom: '5rem',
       }}
     >
       <Box
@@ -21,7 +22,7 @@ const MapComponent: React.FC = () => {
         }}
       >
         <Typography
-          variant="h1"
+          variant="h2"
           sx={{ fontFamily: 'Oswald', fontWeight: '400' }}
         >
           Find us
@@ -29,13 +30,17 @@ const MapComponent: React.FC = () => {
       </Box>
       <Box
         sx={{
-          border: '3px solid black',
-          borderRadius: '15px',
           overflow: 'hidden',
-          boxShadow: '5px 5px 15px rgba(0,0,0,0.3)',
-          maxWidth: '1070px',
+          maxWidth: '800px',
           width: '100%',
           height: 'auto',
+          boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+          transition: '0.15s',
+          '&:hover': {
+            boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+            borderRadius: '2rem',
+            transition: '0.15s',
+          },
         }}
       >
         <iframe

@@ -1,34 +1,29 @@
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  TextField,
-  Typography,
-} from '@mui/material';
+import { Box, Button, TextField, Typography } from '@mui/material';
 
 const ContactForm = () => {
   return (
-    <Container maxWidth="lg">
+    <Box>
       <Box
         sx={{
           textAlign: 'start',
           marginBottom: '20px',
         }}
       >
-        <Typography variant="h3" fontFamily="'Oswald', regular">
-          Contact us
-        </Typography>
-
-        <Divider
+        <Box
           sx={{
             width: '100%',
-            margin: 'auto',
-            marginTop: '2%',
-            marginBottom: '8%',
-            borderBottom: '3px solid rgba(0, 0, 0, 0.999)',
+            borderBottom: '0.15rem solid black',
+            marginBottom: '5rem',
+            paddingBottom: '1rem',
           }}
-        />
+        >
+          <Typography
+            variant="h2"
+            sx={{ fontFamily: 'Oswald', fontWeight: '400' }}
+          >
+            Contact
+          </Typography>
+        </Box>
       </Box>
 
       <Typography
@@ -108,7 +103,7 @@ const ContactForm = () => {
           </Box>
         </form>
       </Box>
-    </Container>
+    </Box>
   );
 };
 
