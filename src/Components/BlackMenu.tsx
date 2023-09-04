@@ -1,12 +1,30 @@
-import { Box, Divider } from '@mui/material';
+import { Box, Divider, Link as MuiLink } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import { Link as MuiLink } from '@mui/material';
 
 export default function BlackMenu() {
+
+  const navigateToSection = (sectionId: string) => {
+    // First navigate to the homepage
+    const navigationEvent = new PopStateEvent('popstate');
+    window.history.pushState({}, '', '/');
+    window.dispatchEvent(navigationEvent);
+
+    // Add a slight delay to ensure that the HomePage component has rendered
+    setTimeout(() => {
+      const sectionElement = document.getElementById(sectionId);
+      if (sectionElement) {
+        sectionElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }, 100);
+  };
+
   return (
     <Box
       sx={{
-        color: 'black', // Changed color here
+        color: 'black',
         fontSize: '18px',
         fontFamily: 'Raleway',
         fontWeight: '500',
@@ -31,67 +49,50 @@ export default function BlackMenu() {
           height: '60px',
         }}
       >
-        <MuiLink href="#" color="inherit" fontSize={'2rem'}>
+        <MuiLink
+          component={RouterLink}
+          to="/"
+          color="inherit"
+          fontSize={'2rem'}
+        >
           BW
         </MuiLink>
-
         <Divider
           orientation="vertical"
           variant="middle"
           flexItem
           sx={{
-            borderColor: 'black', // Changed borderColor here
+            borderColor: 'black',
             padding: '0',
             margin: '0',
           }}
         />
-
         <MuiLink
-          href="#team-section"
+          onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+            e.preventDefault();
+            navigateToSection('team-section');
+          }}
           color="inherit"
           underline="hover"
-          onClick={e => {
-            e.preventDefault();
-
-            const contactSection = document.getElementById('team-section');
-
-            if (contactSection) {
-              contactSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-              });
-            }
-          }}
         >
           The Team
         </MuiLink>
-
         <MuiLink
           component={RouterLink}
-          to="/ProjectPage"
+          to="/"
           color="inherit"
           underline="hover"
         >
-          Portfolio
+          Home
         </MuiLink>
       </Box>
-
       <MuiLink
-        href="#contact-section"
+        onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+          e.preventDefault();
+          navigateToSection('contact-section');
+        }}
         color="inherit"
         underline="hover"
-        onClick={(e: { preventDefault: () => void; }) => {
-          e.preventDefault();
-
-          const contactSection = document.getElementById('contact-section');
-
-          if (contactSection) {
-            contactSection.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start',
-            });
-          }
-        }}
       >
         Contact us
       </MuiLink>

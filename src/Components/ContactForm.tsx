@@ -16,7 +16,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Box>
+    <Box id="contact-section">
       <Box
         sx={{
           textAlign: 'start',
