@@ -43,7 +43,7 @@ function Portfolio() {
           display: 'flex',
           gap: '0.7rem',
           alignItems: 'center',
-          marginBottom: '5rem',
+          marginBottom: '3.5rem',
           cursor: 'pointer',
           color: 'black',
           textDecoration: 'none',
