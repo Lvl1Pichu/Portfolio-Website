@@ -1,7 +1,15 @@
-import { Box, Divider, Typography } from '@mui/material';
+import {
+  Box,
+  Divider,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ContactFormDetail from '../Components/ContactFormDetail';
+import MenuBar from '../Components/Menu';
+import MobileMenu from '../Components/MobileMenu';
 import Footer from '../Components/footer'; // Adjust the path as needed based on your project structure
 
 const DetailsPage: React.FC = () => {
@@ -24,6 +32,9 @@ const DetailsPage: React.FC = () => {
       Beyond her technical prowess, Nathalie thrives in collaborative environments. Drawing parallels from her love for board games, she understands the importance of teamwork, communication, and shared vision. With every sprint in Scrum, she ensures her team is aligned, motivated, and clear on their roles. Clients are consistently impressed by her ability to articulate complex processes in relatable terms, bridging the gap between tech jargon and business needs. 
       Nathalie's board is not just about work, though. It's a testament to her holistic approach to life and her belief that play and professionalism can coexist. Here, every project is a game, every challenge an opportunity, and every solution a triumphant checkmate. Dive into her world, and you'll be met with a symphony of innovation, strategy, and sheer passion.`;
       image = '../nathalie.png';
+      titles = 'Creative lead/ UX Design / Code genius';
+      email = 'nathalie@bestwebsite.com';
+      phone = '+461234567';
       break;
     case 'Jenny':
       description = `Discover Jenny's realm: an adept in TypeScript, a maven in UX, and a PHP enthusiast. Merging her love for nature with digital landscapes, she crafts experiences as serene as a woodland trail. A seasoned traveler of both physical and digital terrains, Jenny possesses a unique ability to intuitively connect user expectations with technical nuances.
@@ -31,6 +42,9 @@ const DetailsPage: React.FC = () => {
       Jenny's expertise is not confined to the technical realm. She's a veritable bridge between the creative and logical, gracefully navigating between graphic artists and backend developers. Her ability to communicate complex ideas with clarity makes her an invaluable asset in cross-disciplinary teams. Clients often commend her for her proactive approach and her unyielding commitment to excellence. When she takes on a project, she not only delivers but elevates the whole team's standard.
       Beyond her hard skills, Jenny's professional demeanor shines in every interaction. She possesses a relentless drive, paired with a compassionate understanding of her client's visions. This allows her to effortlessly align her strategies with their objectives, ensuring every project is a harmonious blend of aesthetics, functionality, and business goals. Dive deeper into her portfolio, and you'll find a symphony of projects that stand testament to her multifaceted expertise and her passion for creating digital masterpieces.`;
       image = '../jenny.png';
+      titles = 'Creative lead/ UX Design / Code genius';
+      email = 'jenny@bestwebsite.com';
+      phone = '+461234567';
       break;
     case 'Sebastian':
       description = `Step into Sebbe's domain: the ultimate coding maestro, fluent in every programming dialect. His passion for martial arts mirrors his approach to code - precise, powerful, and always ahead of the game. As the alpha in every room, Sebbe commands respect in both tech and technique. In the vast digital landscape, he's the samurai who wields the sword of syntax with unmatched finesse.
@@ -38,6 +52,9 @@ const DetailsPage: React.FC = () => {
       His dedication to martial arts provides a unique perspective on discipline and patience, translating seamlessly into his work. Like a martial artist awaiting the right moment to strike, Sebbe is methodical and patient, ensuring that every piece of code he writes is optimized for performance and scalability. His deep dives into the intricacies of algorithms are akin to the intricate katas he practices, each move deliberate and every outcome anticipated.
       Yet, beneath the steely demeanor lies an individual with a profound respect for collaboration and mentorship. Sebbe understands that true mastery is not just about individual brilliance but also about elevating those around him. He frequently engages in tech talks, sharing his vast reservoir of knowledge, and guiding budding programmers. This juxtaposition of strength and humility makes Sebbe an invaluable asset in any project or team.`;
       image = '../sebbe.png';
+      titles = 'Creative lead/ UX Design / Code genius';
+      email = 'sebastian@bestwebsite.com';
+      phone = '+461234567';
       break;
     case 'Linus':
       description = ` Meet Linus: a passionate UX enthusiast, TypeScript aficionado, and a loyal dog lover. With a flair for user-centric design and code precision, he finds joy in every wagging tail and pixel-perfect interface. Dive into his world where creativity meets canine companionship, and where every design has the heart of a story to tell.
@@ -47,6 +64,9 @@ const DetailsPage: React.FC = () => {
       Yet, beyond the screens and the scripts, Linus is a beacon of collaboration and growth. His workshops resonate with laughter, insights, and occasional barks, offering a blend of technical mastery and heartwarming anecdotes. Within his sphere, one doesn't merely learn about UX or TypeScript; they imbibe a philosophy where passion, precision, and companionship reign supreme. In Linus's universe, codes become tales, designs turn into narratives, and every wag is a nod to a job well done.
       `;
       image = '../linus.png';
+      titles = 'Creative lead/ UX Design / Code genius';
+      email = 'linus@bestwebsite.com';
+      phone = '+461234567';
       break;
     case 'Carl':
       description = `Step into Carl's realm: a fusion of vibrant visuals and harmonious sounds. As an astute graphic designer with a deep love for music, he orchestrates pixels and beats in a symphony of experiences. Known to many as the "Maestro of Multimedia", Carl crafts designs that not only capture the eye but also resonate with the soul.
@@ -64,34 +84,106 @@ const DetailsPage: React.FC = () => {
       image = 'deafult.png';
   }
 
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <>
-      <header></header>
+      <header>{isSmallScreen ? <MobileMenu /> : <MenuBar />}</header>
       <main>
         <Box
           sx={{
-            // bgcolor: 'red',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
           }}
         >
-          <Box sx={{ textAlign: 'left', width: '100%' }}>Go back</Box>
+          <Box
+            sx={{
+              textAlign: 'left',
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'row',
+              paddingLeft: '2rem',
+              boxSizing: 'border-box',
+              alignItems: 'center',
+            }}
+          >
+            <Link to="/">
+              <img
+                src="../../src/assets/arrowLeft.png"
+                alt="back"
+                width="50px"
+              />
+            </Link>
+            <Link to="/">
+              <Typography
+                variant="h6"
+                fontFamily="'Raleway', sans-serif"
+                align="left"
+                paddingLeft="1rem"
+              >
+                Go back
+              </Typography>
+            </Link>
+          </Box>
           <Box
             sx={{
               width: '100%',
               maxWidth: '900px',
               // bgcolor: 'blue',
               display: 'flex',
-              flexDirection: 'row',
-
+              flexDirection: 'column',
               justifyContent: 'center',
+              padding: '2rem',
+              boxSizing: 'border-box',
             }}
           >
-            <Box sx={{ width: '30%', paddingRight: '2rem' }}>
-              <img src={image} alt={name} width="100%" />
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+              }}
+            >
+              <Box
+                sx={{ width: '30%', minWidth: '150px', paddingRight: '2rem' }}
+              >
+                <img src={image} alt={name} width="100%" />
+              </Box>
+              <Box>
+                <Box
+                  component="h2"
+                  sx={{
+                    fontSize: '40px',
+                    margin: '0',
+                    color: '#522E07',
+                    fontFamily: 'Oswald',
+                  }}
+                >
+                  {name}
+                </Box>
+                <Typography
+                  variant="h6"
+                  fontFamily="'Raleway', sans-serif"
+                  align="left"
+                  gutterBottom
+                >
+                  {titles}
+                  <br />
+                  {email} <br />
+                  {phone}
+                  <br />
+                </Typography>
+              </Box>
             </Box>
-            <Box>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                textAlign: 'center',
+              }}
+            >
               <Box
                 component="h2"
                 sx={{
@@ -101,92 +193,58 @@ const DetailsPage: React.FC = () => {
                   fontFamily: 'Oswald',
                 }}
               >
-                {name}
+                Get in touch!
+              </Box>
+              <Divider
+                sx={{
+                  width: '100%',
+                  margin: 'auto',
+                  marginTop: '1rem',
+                  marginBottom: '1rem',
+                  borderBottom: '3px solid rgba(0, 0, 0, 0.999)',
+                }}
+              />
+              <Typography
+                variant="h5"
+                fontFamily="'Raleway', sans-serif"
+                align="center"
+                gutterBottom
+              >
+                Thank you for your interest in our services.
+                <br />
+                Please use the form below to get in touch with {name}. The
+                message will be reviewed and you will receive a reply as soon as
+                possible.
+              </Typography>
+              <ContactFormDetail />
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
+              <Box
+                component="h2"
+                sx={{
+                  fontSize: '40px',
+                  margin: '0',
+                  color: '#522E07',
+                  fontFamily: 'Oswald',
+                  textAlign: 'center',
+                }}
+              >
+                Special knowledge
               </Box>
               <Typography
-                variant="h7"
+                variant="h6"
                 fontFamily="'Raleway', sans-serif"
                 align="left"
                 gutterBottom
               >
-                {titles}
-                <br />
-                {email} <br />
-                {phone}
-                <br />
+                {description}
               </Typography>
             </Box>
-          </Box>
-          <Box
-            sx={{
-              maxWidth: '900px',
-              // bgcolor: 'blue',
-              display: 'flex',
-              flexDirection: 'column',
-              textAlign: 'center',
-            }}
-          >
-            <Box
-              component="h2"
-              sx={{
-                fontSize: '40px',
-                margin: '0',
-                color: '#522E07',
-                fontFamily: 'Oswald',
-              }}
-            >
-              Get in touch!
-            </Box>
-            <Divider
-              sx={{
-                width: '100%',
-                margin: 'auto',
-                marginTop: '1rem',
-                marginBottom: '1rem',
-                borderBottom: '3px solid rgba(0, 0, 0, 0.999)',
-              }}
-            />
-            <Typography
-              variant="h5"
-              fontFamily="'Raleway', sans-serif"
-              align="center"
-              gutterBottom
-            >
-              Thank you for your interest in our services.
-              <br />
-              Please use the form below to get in touch with {name}. The message
-              will be reviewed and you will receive a reply as soon as possible.
-            </Typography>
-            <ContactFormDetail />
-          </Box>
-          <Box
-            sx={{
-              maxWidth: '900px',
-              // bgcolor: 'blue',
-              display: 'flex',
-              flexDirection: 'column',
-            }}
-          >
-            <Box
-              component="h2"
-              sx={{
-                fontSize: '40px',
-                margin: '0',
-                color: '#522E07',
-                fontFamily: 'Oswald',
-                textAlign: 'center',
-              }}
-            >
-              Special knowledge
-            </Box>
-            <Typography
-              variant="h6"
-              fontFamily="'Raleway', sans-serif"
-              align="left"
-              gutterBottom
-            >
-              {description}
-            </Typography>
           </Box>
         </Box>
       </main>
