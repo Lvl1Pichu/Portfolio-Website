@@ -1,7 +1,7 @@
-import { Box } from '@mui/material';
+import { Box, Divider, Typography } from '@mui/material';
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ContactForm from '../Components/ContactForm';
+import ContactFormDetail from '../Components/ContactFormDetail';
 import Footer from '../Components/footer'; // Adjust the path as needed based on your project structure
 
 const DetailsPage: React.FC = () => {
@@ -13,6 +13,9 @@ const DetailsPage: React.FC = () => {
   const { name } = useParams<PersonDetailParams>();
   let description = '';
   let image = '';
+  let titles = '';
+  let email = '';
+  let phone = '';
 
   switch (name) {
     case 'Nathalie':
@@ -52,6 +55,9 @@ const DetailsPage: React.FC = () => {
       Yet, beyond the monitor and the mixing console, Carl is a mentor to many. He believes that like in a band, collaboration is key. He often says, "Design and music both thrive on harmony, and harmony is achieved when every member understands their role and contributes to the collective melody." With Carl at the helm, projects become jam sessions, where ideas flow freely, and the final output is always a chart-topper.
       Embarking on a journey with Carl is like attending a grand concert. From the opening act to the encore, you're guaranteed a performance where visuals sing, designs dance, and where every project strikes the perfect chord.`;
       image = '../carl.png';
+      titles = 'Creative lead/ UX Design / Code genius';
+      email = 'carl@bestwebsite.com';
+      phone = '+461234567';
       break;
     default:
       description = 'Default description';
@@ -62,13 +68,9 @@ const DetailsPage: React.FC = () => {
     <>
       <header></header>
       <main>
-        <h1>{name}</h1>
-        <p>{description}</p>
-        <img src={image} alt={name} />
-
         <Box
           sx={{
-            bgcolor: 'red',
+            // bgcolor: 'red',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -77,14 +79,17 @@ const DetailsPage: React.FC = () => {
           <Box sx={{ textAlign: 'left', width: '100%' }}>Go back</Box>
           <Box
             sx={{
-              width: '70%',
-              bgcolor: 'blue',
+              width: '100%',
+              maxWidth: '900px',
+              // bgcolor: 'blue',
               display: 'flex',
               flexDirection: 'row',
+
+              justifyContent: 'center',
             }}
           >
-            <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-              <img src="jenny.png" alt="" />
+            <Box sx={{ width: '30%', paddingRight: '2rem' }}>
+              <img src={image} alt={name} width="100%" />
             </Box>
             <Box>
               <Box
@@ -96,26 +101,94 @@ const DetailsPage: React.FC = () => {
                   fontFamily: 'Oswald',
                 }}
               >
-                Jenny Weijland
+                {name}
               </Box>
-              Creative lead/ UX Design / Code <br />
-              geniuscarl@bestwebsite.com+461234567{' '}
+              <Typography
+                variant="h7"
+                fontFamily="'Raleway', sans-serif"
+                align="left"
+                gutterBottom
+              >
+                {titles}
+                <br />
+                {email} <br />
+                {phone}
+                <br />
+              </Typography>
             </Box>
           </Box>
           <Box
-            component="h2"
             sx={{
-              fontSize: '40px',
-              margin: '0',
-              color: '#522E07',
-              fontFamily: 'Oswald',
+              maxWidth: '900px',
+              // bgcolor: 'blue',
+              display: 'flex',
+              flexDirection: 'column',
+              textAlign: 'center',
             }}
           >
-            Get in touch!
+            <Box
+              component="h2"
+              sx={{
+                fontSize: '40px',
+                margin: '0',
+                color: '#522E07',
+                fontFamily: 'Oswald',
+              }}
+            >
+              Get in touch!
+            </Box>
+            <Divider
+              sx={{
+                width: '100%',
+                margin: 'auto',
+                marginTop: '1rem',
+                marginBottom: '1rem',
+                borderBottom: '3px solid rgba(0, 0, 0, 0.999)',
+              }}
+            />
+            <Typography
+              variant="h5"
+              fontFamily="'Raleway', sans-serif"
+              align="center"
+              gutterBottom
+            >
+              Thank you for your interest in our services.
+              <br />
+              Please use the form below to get in touch with {name}. The message
+              will be reviewed and you will receive a reply as soon as possible.
+            </Typography>
+            <ContactFormDetail />
+          </Box>
+          <Box
+            sx={{
+              maxWidth: '900px',
+              // bgcolor: 'blue',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+          >
+            <Box
+              component="h2"
+              sx={{
+                fontSize: '40px',
+                margin: '0',
+                color: '#522E07',
+                fontFamily: 'Oswald',
+                textAlign: 'center',
+              }}
+            >
+              Special knowledge
+            </Box>
+            <Typography
+              variant="h6"
+              fontFamily="'Raleway', sans-serif"
+              align="left"
+              gutterBottom
+            >
+              {description}
+            </Typography>
           </Box>
         </Box>
-
-        <ContactForm />
       </main>
       <footer>
         <Footer />
