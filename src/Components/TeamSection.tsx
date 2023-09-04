@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, CardMedia, Typography } from '@mui/material';
 
 function TeamSection() {
   return (
@@ -94,9 +94,24 @@ function TeamSection() {
           </Box>
           <Box>
             {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
+            <Box
+              component="span"
+              sx={{
+                fontSize: '15px',
+                cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
+              READ MORE
             </Box>
           </Box>
         </Box>
@@ -105,7 +120,21 @@ function TeamSection() {
             '@media (max-width:768px)': { margin: '0 auto', maxWidth: '100wv' },
           }}
         >
-          <img style={{}} src="jenny.png" alt="" />
+          <CardMedia
+            component="img"
+            image="./jenny.png"
+            alt="Jenny"
+            sx={{
+              width: '20rem',
+              height: '20rem',
+              cursor: 'pointer',
+              '&:hover': {
+                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                borderRadius: '2rem',
+                transition: '0.15s',
+              },
+            }}
+          />
         </Box>
       </Box>
 
@@ -120,7 +149,21 @@ function TeamSection() {
         }}
       >
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img style={{ objectFit: 'cover' }} src="carl.png" alt="" />
+          <CardMedia
+            component="img"
+            image="./carl.png"
+            alt="Carl"
+            sx={{
+              width: '20rem',
+              height: '20rem',
+              cursor: 'pointer',
+              '&:hover': {
+                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                borderRadius: '2rem',
+                transition: '0.15s',
+              },
+            }}
+          />
         </Box>
         <Box
           sx={{
@@ -161,9 +204,24 @@ function TeamSection() {
           </Box>
           <Box>
             {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
+            <Box
+              component="span"
+              sx={{
+                fontSize: '15px',
+                cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
+              READ MORE
             </Box>
           </Box>
         </Box>
@@ -225,20 +283,43 @@ function TeamSection() {
           </Box>
           <Box>
             {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
             <Box
               component="span"
               sx={{
-                fontSize: '20px',
+                fontSize: '15px',
                 cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
               }}
             >
-              READ MORE!
+              READ MORE
             </Box>
           </Box>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img src="sebbe.png" alt="" />
+          <CardMedia
+            component="img"
+            image="./sebbe.png"
+            alt="Sebastian"
+            sx={{
+              width: '20rem',
+              height: '20rem',
+              cursor: 'pointer',
+              '&:hover': {
+                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                borderRadius: '2rem',
+                transition: '0.15s',
+              },
+            }}
+          />
         </Box>
       </Box>
 
@@ -253,7 +334,21 @@ function TeamSection() {
         }}
       >
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img style={{ objectFit: 'cover' }} src="linus.png" alt="" />
+          <CardMedia
+            component="img"
+            image="./linus.png"
+            alt="Linus"
+            sx={{
+              width: '20rem',
+              height: '20rem',
+              cursor: 'pointer',
+              '&:hover': {
+                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                borderRadius: '2rem',
+                transition: '0.15s',
+              },
+            }}
+          />
         </Box>
         <Box
           sx={{
@@ -294,9 +389,24 @@ function TeamSection() {
           </Box>
           <Box>
             {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
+            <Box
+              component="span"
+              sx={{
+                fontSize: '15px',
+                cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
+              READ MORE
             </Box>
           </Box>
         </Box>
@@ -357,20 +467,43 @@ function TeamSection() {
           </Box>
           <Box>
             {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
             <Box
               component="span"
               sx={{
-                fontSize: '20px',
+                fontSize: '15px',
                 cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
               }}
             >
-              READ MORE!
+              READ MORE
             </Box>
           </Box>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img src="nathalie.png" alt="" />
+          <CardMedia
+            component="img"
+            image="./nathalie.png"
+            alt="Nathalie"
+            sx={{
+              width: '20rem',
+              height: '20rem',
+              cursor: 'pointer',
+              '&:hover': {
+                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                borderRadius: '2rem',
+                transition: '0.15s',
+              },
+            }}
+          />
         </Box>
       </Box>
     </Box>
