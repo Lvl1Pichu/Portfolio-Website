@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, CardMedia, Link, Typography } from '@mui/material';
 
 function TeamSection() {
   return (
@@ -92,20 +92,55 @@ function TeamSection() {
               landscapes, she crafts experiences as serene as a woodland trail.
             </Box>
           </Box>
-          <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+          <Link
+            href="/detailsPage/jenny"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
+            <Box
+              component="span"
+              sx={{
+                fontSize: '16px',
+                cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box
           sx={{
             '@media (max-width:768px)': { margin: '0 auto', maxWidth: '100wv' },
           }}
         >
-          <img style={{}} src="jenny.png" alt="" />
+          <Link href="/detailsPage/jenny">
+            <CardMedia
+              component="img"
+              image="./jenny.png"
+              alt="Jenny"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
       </Box>
 
@@ -120,7 +155,25 @@ function TeamSection() {
         }}
       >
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img style={{ objectFit: 'cover' }} src="carl.png" alt="" />
+          <Link href="/detailsPage/carl">
+            <CardMedia
+              component="img"
+              image="./carl.png"
+              alt="Carl"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
         <Box
           sx={{
@@ -159,13 +212,30 @@ function TeamSection() {
               companionship.
             </Box>
           </Box>
-          <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+          <Link
+            href="/detailsPage/carl"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
+            <Box
+              component="span"
+              sx={{
+                fontSize: '16px',
+                cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
       </Box>
 
@@ -223,22 +293,51 @@ function TeamSection() {
               tech and technique.
             </Box>
           </Box>
-          <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
+          <Link
+            href="/detailsPage/sebastian"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
             <Box
               component="span"
               sx={{
-                fontSize: '20px',
+                fontSize: '16px',
                 cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
               }}
             >
-              READ MORE!
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img src="sebbe.png" alt="" />
+          <Link href="/detailsPage/sebastian">
+            <CardMedia
+              component="img"
+              image="./sebbe.png"
+              alt="Sebastian"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
       </Box>
 
@@ -253,7 +352,25 @@ function TeamSection() {
         }}
       >
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img style={{ objectFit: 'cover' }} src="linus.png" alt="" />
+          <Link href="/detailsPage/linus">
+            <CardMedia
+              component="img"
+              image="./linus.png"
+              alt="Linus"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
         <Box
           sx={{
@@ -292,13 +409,30 @@ function TeamSection() {
               companionship.
             </Box>
           </Box>
-          <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+          <Link
+            href="/detailsPage/linus"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
+            <Box
+              component="span"
+              sx={{
+                fontSize: '16px',
+                cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
       </Box>
 
@@ -355,22 +489,51 @@ function TeamSection() {
               every move is a winning one.
             </Box>
           </Box>
-          <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
+          <Link
+            href="/detailsPage/nathalie"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
             <Box
               component="span"
               sx={{
-                fontSize: '20px',
+                fontSize: '16px',
                 cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
               }}
             >
-              READ MORE!
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img src="nathalie.png" alt="" />
+          <Link href="/detailsPage/nathalie">
+            <CardMedia
+              component="img"
+              image="./nathalie.png"
+              alt="Nathalie"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
       </Box>
     </Box>
