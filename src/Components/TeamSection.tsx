@@ -122,21 +122,23 @@ function TeamSection() {
             '@media (max-width:768px)': { margin: '0 auto', maxWidth: '100wv' },
           }}
         >
-          <CardMedia
-            component="img"
-            image="./jenny.png"
-            alt="Jenny"
-            sx={{
-              width: '20rem',
-              height: '20rem',
-              cursor: 'pointer',
-              '&:hover': {
-                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
-                borderRadius: '2rem',
-                transition: '0.15s',
-              },
-            }}
-          />
+          <Link href="/detailsPage/jenny">
+            <CardMedia
+              component="img"
+              image="./jenny.png"
+              alt="Jenny"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
       </Box>
 
@@ -151,21 +153,23 @@ function TeamSection() {
         }}
       >
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <CardMedia
-            component="img"
-            image="./carl.png"
-            alt="Carl"
-            sx={{
-              width: '20rem',
-              height: '20rem',
-              cursor: 'pointer',
-              '&:hover': {
-                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
-                borderRadius: '2rem',
-                transition: '0.15s',
-              },
-            }}
-          />
+          <Link href="/detailsPage/carl">
+            <CardMedia
+              component="img"
+              image="./carl.png"
+              alt="Carl"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
         <Box
           sx={{
@@ -311,21 +315,23 @@ function TeamSection() {
           </Link>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <CardMedia
-            component="img"
-            image="./sebbe.png"
-            alt="Sebastian"
-            sx={{
-              width: '20rem',
-              height: '20rem',
-              cursor: 'pointer',
-              '&:hover': {
-                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
-                borderRadius: '2rem',
-                transition: '0.15s',
-              },
-            }}
-          />
+          <Link href="/detailsPage/sebastian">
+            <CardMedia
+              component="img"
+              image="./sebbe.png"
+              alt="Sebastian"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
       </Box>
 
@@ -340,21 +346,23 @@ function TeamSection() {
         }}
       >
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <CardMedia
-            component="img"
-            image="./linus.png"
-            alt="Linus"
-            sx={{
-              width: '20rem',
-              height: '20rem',
-              cursor: 'pointer',
-              '&:hover': {
-                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
-                borderRadius: '2rem',
-                transition: '0.15s',
-              },
-            }}
-          />
+          <Link href="/detailsPage/linus">
+            <CardMedia
+              component="img"
+              image="./linus.png"
+              alt="Linus"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
         <Box
           sx={{
@@ -499,21 +507,23 @@ function TeamSection() {
           </Link>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <CardMedia
-            component="img"
-            image="./nathalie.png"
-            alt="Nathalie"
-            sx={{
-              width: '20rem',
-              height: '20rem',
-              cursor: 'pointer',
-              '&:hover': {
-                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
-                borderRadius: '2rem',
-                transition: '0.15s',
-              },
-            }}
-          />
+          <Link href="/detailsPage/nathalie">
+            <CardMedia
+              component="img"
+              image="./nathalie.png"
+              alt="Nathalie"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
         </Box>
       </Box>
     </Box>
