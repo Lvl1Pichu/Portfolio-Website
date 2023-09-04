@@ -14,6 +14,7 @@ function TeamSection() {
         },
         fontFamily: 'Raleway',
       }}
+      id="team-section"
     >
       <Box
         sx={{
