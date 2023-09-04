@@ -33,8 +33,8 @@ export default function BlackMenu() {
           justifyContent: 'space-between',
           alignItems: 'center',
           width: '100%',
-          mt: "2rem",
-          mb: "2rem",
+          mt: '2rem',
+          mb: '2rem',
           boxSizing: 'border-box',
           zIndex: 10,
         }}
@@ -81,6 +81,7 @@ export default function BlackMenu() {
             sx={{
               textDecorationThickness: '0.05rem',
               textUnderlineOffset: '0.15rem',
+              cursor: 'pointer',
             }}
           >
             The team
@@ -108,6 +109,7 @@ export default function BlackMenu() {
           sx={{
             textDecorationThickness: '0.05rem',
             textUnderlineOffset: '0.15rem',
+            cursor: 'pointer',
           }}
         >
           Contact us
