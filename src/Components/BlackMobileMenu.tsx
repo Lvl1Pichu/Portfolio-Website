@@ -1,4 +1,11 @@
-import { Box, Button, Divider, Link as MuiLink, Menu, MenuItem } from '@mui/material';
+import {
+  Box,
+  Button,
+  Divider,
+  Menu,
+  MenuItem,
+  Link as MuiLink,
+} from '@mui/material';
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -50,8 +57,17 @@ export default function BlackMobileMenu() {
       }}
     >
       <Box>
-        <MuiLink component={RouterLink} to="/" color="inherit" fontSize={'2rem'}>
-          BW
+        <MuiLink
+          component={RouterLink}
+          to="/"
+          color="inherit"
+          fontSize={'2rem'}
+        >
+          <img
+            src="./src/assets/logoo.png"
+            alt="logo"
+            style={{ height: '3.5rem' }}
+          />
         </MuiLink>
         <Divider
           orientation="vertical"
@@ -100,13 +116,26 @@ export default function BlackMobileMenu() {
           },
         }}
       >
-        <MenuItem component={RouterLink} to="/" onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
+        <MenuItem
+          component={RouterLink}
+          to="/"
+          onClick={handleClose}
+          sx={{ fontFamily: 'Raleway' }}
+        >
           The team
         </MenuItem>
-        <MenuItem component={RouterLink} to="/ProjectPage" onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
+        <MenuItem
+          component={RouterLink}
+          to="/ProjectPage"
+          onClick={handleClose}
+          sx={{ fontFamily: 'Raleway' }}
+        >
           Portfolio
         </MenuItem>
-        <MenuItem onClick={navigateToContactSection} sx={{ fontFamily: 'Raleway' }}>
+        <MenuItem
+          onClick={navigateToContactSection}
+          sx={{ fontFamily: 'Raleway' }}
+        >
           Contact us
         </MenuItem>
       </Menu>
