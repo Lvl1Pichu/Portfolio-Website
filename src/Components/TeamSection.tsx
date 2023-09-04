@@ -131,6 +131,7 @@ function TeamSection() {
                 width: '20rem',
                 height: '20rem',
                 cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
                 '&:hover': {
                   boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
                   borderRadius: '2rem',
@@ -162,6 +163,7 @@ function TeamSection() {
                 width: '20rem',
                 height: '20rem',
                 cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
                 '&:hover': {
                   boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
                   borderRadius: '2rem',
@@ -324,6 +326,7 @@ function TeamSection() {
                 width: '20rem',
                 height: '20rem',
                 cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
                 '&:hover': {
                   boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
                   borderRadius: '2rem',
@@ -355,6 +358,7 @@ function TeamSection() {
                 width: '20rem',
                 height: '20rem',
                 cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
                 '&:hover': {
                   boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
                   borderRadius: '2rem',
@@ -516,6 +520,7 @@ function TeamSection() {
                 width: '20rem',
                 height: '20rem',
                 cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
                 '&:hover': {
                   boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
                   borderRadius: '2rem',
