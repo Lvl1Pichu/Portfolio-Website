@@ -36,7 +36,7 @@ const projects = [
 
 function Portfolio() {
   return (
-    <Container>
+    <Container sx={{ marginTop: '4rem' }}>
       <Link
         href="/"
         sx={{
