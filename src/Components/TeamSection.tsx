@@ -6,7 +6,11 @@ function TeamSection() {
       sx={{
         '@media (max-width:400px)': {
           // padding: '0',
-          margin: '0 auto',
+          // margin: '0 auto',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          Gap: '0',
         },
         fontFamily: 'Raleway',
       }}
@@ -38,8 +42,11 @@ function TeamSection() {
         sx={{
           display: 'flex',
           gap: '2rem',
-          marginBottom: '5rem',
-          '@media (max-width:768px)': { flexDirection: 'column' },
+          '@media (max-width:768px)': {
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          },
         }}
       >
         <Box
@@ -92,8 +99,12 @@ function TeamSection() {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img src="jenny.png" alt="" />
+        <Box
+          sx={{
+            '@media (max-width:768px)': { margin: '0 auto', maxWidth: '100wv' },
+          }}
+        >
+          <img style={{}} src="jenny.png" alt="" />
         </Box>
       </Box>
 
@@ -104,7 +115,6 @@ function TeamSection() {
           display: 'flex',
           gap: '2rem',
           marginTop: '4rem',
-          marginBottom: '5rem',
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
@@ -165,7 +175,6 @@ function TeamSection() {
           display: 'flex',
           gap: '2rem',
           marginTop: '4rem',
-          marginBottom: '5rem',
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
@@ -239,7 +248,6 @@ function TeamSection() {
           display: 'flex',
           gap: '2rem',
           marginTop: '4rem',
-          marginBottom: '5rem',
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
@@ -300,7 +308,6 @@ function TeamSection() {
           display: 'flex',
           gap: '2rem',
           marginTop: '4rem',
-          marginBottom: '5rem',
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
