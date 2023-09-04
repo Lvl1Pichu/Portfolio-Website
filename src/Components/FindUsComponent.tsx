@@ -23,7 +23,11 @@ const MapComponent: React.FC = () => {
       >
         <Typography
           variant="h2"
-          sx={{ fontFamily: 'Oswald', fontWeight: '400' }}
+          sx={{
+            fontFamily: 'Oswald',
+            fontWeight: '400',
+            '@media (max-width:768px)': { fontSize: '32px' },
+          }}
         >
           Find us
         </Typography>

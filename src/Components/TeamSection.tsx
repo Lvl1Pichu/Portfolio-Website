@@ -5,7 +5,7 @@ function TeamSection() {
     <Box
       sx={{
         '@media (max-width:400px)': {
-          padding: '0',
+          // padding: '0',
           margin: '0 auto',
         },
         fontFamily: 'Raleway',
@@ -22,7 +22,11 @@ function TeamSection() {
       >
         <Typography
           variant="h2"
-          sx={{ fontFamily: 'Oswald', fontWeight: '400' }}
+          sx={{
+            fontFamily: 'Oswald',
+            fontWeight: '400',
+            '@media (max-width:768px)': { fontSize: '32px' },
+          }}
         >
           The team
         </Typography>
@@ -60,6 +64,7 @@ function TeamSection() {
                 margin: '0',
                 color: '#522E07',
                 fontFamily: 'Oswald',
+                '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
               Jenny Weijland
@@ -68,7 +73,10 @@ function TeamSection() {
               component="span"
               sx={{
                 fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                '@media (max-width:768px)': {
+                  marginBottom: '1rem',
+                  fontSize: '16px',
+                },
               }}
             >
               Discover Jenny's realm: an adept in TypeScript, a maven in UX, and
@@ -118,6 +126,7 @@ function TeamSection() {
                 margin: '0',
                 color: '#522E07',
                 fontFamily: 'Oswald',
+                '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
               Carl Hasselblad
@@ -126,7 +135,10 @@ function TeamSection() {
               component="span"
               sx={{
                 fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                '@media (max-width:768px)': {
+                  marginBottom: '1rem',
+                  fontSize: '16px',
+                },
               }}
             >
               Meet Carl: a passionate UX enthusiast, TypeScript aficionado, and
@@ -179,6 +191,7 @@ function TeamSection() {
                 margin: '0',
                 color: '#522E07',
                 fontFamily: 'Oswald',
+                '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
               Sebastian Johansson
@@ -187,7 +200,10 @@ function TeamSection() {
               component="span"
               sx={{
                 fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                '@media (max-width:768px)': {
+                  marginBottom: '1rem',
+                  fontSize: '16px',
+                },
               }}
             >
               Step into Sebbe's domain: the ultimate coding maestro, fluent in
@@ -245,6 +261,7 @@ function TeamSection() {
                 margin: '0',
                 color: '#522E07',
                 fontFamily: 'Oswald',
+                '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
               Linus Hammarberg
@@ -253,7 +270,10 @@ function TeamSection() {
               component="span"
               sx={{
                 fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                '@media (max-width:768px)': {
+                  marginBottom: '1rem',
+                  fontSize: '16px',
+                },
               }}
             >
               Meet Linus: a passionate UX enthusiast, TypeScript aficionado, and
@@ -306,6 +326,7 @@ function TeamSection() {
                 margin: '0',
                 color: '#522E07',
                 fontFamily: 'Oswald',
+                '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
               Nathalie Gustafsson
@@ -314,7 +335,10 @@ function TeamSection() {
               component="span"
               sx={{
                 fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                '@media (max-width:768px)': {
+                  marginBottom: '1rem',
+                  fontSize: '16px',
+                },
               }}
             >
               Welcome to Nathalie's board: where Swift meets Figma and

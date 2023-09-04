@@ -8,7 +8,7 @@ import Footer from '../Components/footer';
 
 const HomePage: React.FC = () => {
   return (
-    <>
+    <div className="body">
       <header>
         <HeaderSection />
       </header>
@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 };
 

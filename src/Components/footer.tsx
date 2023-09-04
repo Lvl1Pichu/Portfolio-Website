@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/Logo.png';
@@ -16,18 +16,38 @@ const Footer: React.FC = () => {
         height: '586px',
         backgroundColor: 'rgba(81, 88, 63, 0.56)',
         color: 'black',
-        padding: 2,
+        width: '100%',
+        overflowX: 'hidden',
       }}
     >
-      <Container maxWidth={false} style={{ width: '100%' }}>
+      <Box>
+        {/* <Container maxWidth={false} style={{ width: '100%' }}> */}
         <Box
-          display="flex"
-          justifyContent="space-between"
-          alignItems="flex-start"
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            // width: '100%',
+          }}
         >
-          <img src={Logo} alt="Logo" style={{ marginRight: 'auto' }} />
-          <Box display="flex">
-            <Box mr="144px">
+          <img
+            src={Logo}
+            alt="Logo"
+            style={{ marginLeft: '32px', marginTop: '32px' }}
+          />
+          <Box
+            display="flex"
+            sx={{
+              marginRight: '2rem',
+              '@media (max-width:768px)': { marginRight: '32px' },
+            }}
+          >
+            <Box
+              sx={{
+                marginRight: '144px',
+                '@media (max-width:768px)': { margin: '0' },
+              }}
+            >
               <Typography
                 variant="h6"
                 sx={{
@@ -36,6 +56,7 @@ const Footer: React.FC = () => {
                   fontWeight: 'bold',
                   fontSize: '30px',
                   fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
                 }}
               >
                 Company
@@ -47,6 +68,7 @@ const Footer: React.FC = () => {
                   fontSize: '30px',
                   fontWeight: 'light',
                   fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
                 }}
               >
                 About us
@@ -58,6 +80,7 @@ const Footer: React.FC = () => {
                   fontSize: '30px',
                   fontWeight: '300',
                   fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
                 }}
               >
                 Careers
@@ -71,12 +94,13 @@ const Footer: React.FC = () => {
                   fontSize: '30px',
                   fontWeight: '300',
                   fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
                 }}
               >
                 Our Projects
               </Typography>
             </Box>
-            <Box>
+            <Box sx={{ '@media (max-width: 768px)': { marginLeft: '2rem' } }}>
               <Typography
                 variant="h6"
                 sx={{
@@ -85,6 +109,7 @@ const Footer: React.FC = () => {
                   fontWeight: 'bold',
                   fontSize: '30px',
                   fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
                 }}
               >
                 Help
@@ -98,6 +123,7 @@ const Footer: React.FC = () => {
                   fontSize: '30px',
                   fontWeight: '300',
                   fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
                 }}
               >
                 Contact
@@ -109,6 +135,7 @@ const Footer: React.FC = () => {
                   fontSize: '30px',
                   fontWeight: '300',
                   fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
                 }}
               >
                 Support
@@ -119,6 +146,7 @@ const Footer: React.FC = () => {
                   fontSize: '30px',
                   fontWeight: '300',
                   fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
                 }}
               >
                 Our future
@@ -126,7 +154,7 @@ const Footer: React.FC = () => {
             </Box>
           </Box>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 };
