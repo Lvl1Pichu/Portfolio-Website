@@ -33,7 +33,7 @@ const DetailsPage: React.FC = () => {
       Beyond her technical prowess, Nathalie thrives in collaborative environments. Drawing parallels from her love for board games, she understands the importance of teamwork, communication, and shared vision. With every sprint in Scrum, she ensures her team is aligned, motivated, and clear on their roles. Clients are consistently impressed by her ability to articulate complex processes in relatable terms, bridging the gap between tech jargon and business needs. 
       Nathalie's board is not just about work, though. It's a testament to her holistic approach to life and her belief that play and professionalism can coexist. Here, every project is a game, every challenge an opportunity, and every solution a triumphant checkmate. Dive into her world, and you'll be met with a symphony of innovation, strategy, and sheer passion.`;
       image = '../nathalie.png';
-      titles = 'Creative lead/ UX Design / Code genius';
+      titles = 'Creative lead/Code genius';
       email = 'nathalie@bestwebsite.com';
       phone = '+461234567';
       break;
@@ -43,7 +43,7 @@ const DetailsPage: React.FC = () => {
       Jenny's expertise is not confined to the technical realm. She's a veritable bridge between the creative and logical, gracefully navigating between graphic artists and backend developers. Her ability to communicate complex ideas with clarity makes her an invaluable asset in cross-disciplinary teams. Clients often commend her for her proactive approach and her unyielding commitment to excellence. When she takes on a project, she not only delivers but elevates the whole team's standard.
       Beyond her hard skills, Jenny's professional demeanor shines in every interaction. She possesses a relentless drive, paired with a compassionate understanding of her client's visions. This allows her to effortlessly align her strategies with their objectives, ensuring every project is a harmonious blend of aesthetics, functionality, and business goals. Dive deeper into her portfolio, and you'll find a symphony of projects that stand testament to her multifaceted expertise and her passion for creating digital masterpieces.`;
       image = '../jenny.png';
-      titles = 'Creative lead/ UX Design / Code genius';
+      titles = 'Creative lead/ UX Design';
       email = 'jenny@bestwebsite.com';
       phone = '+461234567';
       break;
@@ -53,7 +53,7 @@ const DetailsPage: React.FC = () => {
       His dedication to martial arts provides a unique perspective on discipline and patience, translating seamlessly into his work. Like a martial artist awaiting the right moment to strike, Sebbe is methodical and patient, ensuring that every piece of code he writes is optimized for performance and scalability. His deep dives into the intricacies of algorithms are akin to the intricate katas he practices, each move deliberate and every outcome anticipated.
       Yet, beneath the steely demeanor lies an individual with a profound respect for collaboration and mentorship. Sebbe understands that true mastery is not just about individual brilliance but also about elevating those around him. He frequently engages in tech talks, sharing his vast reservoir of knowledge, and guiding budding programmers. This juxtaposition of strength and humility makes Sebbe an invaluable asset in any project or team.`;
       image = '../sebbe.png';
-      titles = 'Creative lead/ UX Design / Code genius';
+      titles = ' UX Design / Code genius';
       email = 'sebastian@bestwebsite.com';
       phone = '+461234567';
       break;
@@ -65,7 +65,7 @@ const DetailsPage: React.FC = () => {
       Yet, beyond the screens and the scripts, Linus is a beacon of collaboration and growth. His workshops resonate with laughter, insights, and occasional barks, offering a blend of technical mastery and heartwarming anecdotes. Within his sphere, one doesn't merely learn about UX or TypeScript; they imbibe a philosophy where passion, precision, and companionship reign supreme. In Linus's universe, codes become tales, designs turn into narratives, and every wag is a nod to a job well done.
       `;
       image = '../linus.png';
-      titles = 'Creative lead/ UX Design / Code genius';
+      titles = 'Creative lead/  Code genius';
       email = 'linus@bestwebsite.com';
       phone = '+461234567';
       break;
@@ -76,7 +76,7 @@ const DetailsPage: React.FC = () => {
       Yet, beyond the monitor and the mixing console, Carl is a mentor to many. He believes that like in a band, collaboration is key. He often says, "Design and music both thrive on harmony, and harmony is achieved when every member understands their role and contributes to the collective melody." With Carl at the helm, projects become jam sessions, where ideas flow freely, and the final output is always a chart-topper.
       Embarking on a journey with Carl is like attending a grand concert. From the opening act to the encore, you're guaranteed a performance where visuals sing, designs dance, and where every project strikes the perfect chord.`;
       image = '../carl.png';
-      titles = 'Creative lead/ UX Design / Code genius';
+      titles = ' UX Design / Code genius';
       email = 'carl@bestwebsite.com';
       phone = '+461234567';
       break;
@@ -124,7 +124,6 @@ const DetailsPage: React.FC = () => {
                 display: 'flex',
                 gap: '0.7rem',
                 alignItems: 'center',
-                marginBottom: '5rem',
                 cursor: 'pointer',
                 color: 'black',
                 textDecoration: 'none',
@@ -155,7 +154,6 @@ const DetailsPage: React.FC = () => {
             sx={{
               width: '100%',
               maxWidth: '900px',
-              // bgcolor: 'blue',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
@@ -168,27 +166,33 @@ const DetailsPage: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
+                height: '15rem',
               }}
             >
               <Box
-                sx={{ width: '30%', minWidth: '150px', paddingRight: '2rem' }}
-              >
-                <img src={image} alt={name} width="100%" />
-              </Box>
+                sx={{
+                  width: isSmallScreen ? '60%' : '30%',
+                  marginRight: '1rem',
+                  backgroundImage: `url(${image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              ></Box>
               <Box>
                 <Box
                   component="h2"
                   sx={{
-                    fontSize: '40px',
+                    fontSize: isSmallScreen ? '30px' : '40px',
                     margin: '0',
-                    color: '#522E07',
+                    color: 'black',
                     fontFamily: 'Oswald',
                   }}
                 >
                   {name}
                 </Box>
                 <Typography
-                  variant="h6"
+                  variant={isSmallScreen ? 'h7' : 'h6'}
                   fontFamily="'Raleway', sans-serif"
                   align="left"
                   gutterBottom
@@ -206,6 +210,8 @@ const DetailsPage: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 textAlign: 'center',
+                alignItems: 'center',
+                paddingTop: '5rem',
               }}
             >
               <Box
@@ -213,7 +219,7 @@ const DetailsPage: React.FC = () => {
                 sx={{
                   fontSize: '40px',
                   margin: '0',
-                  color: '#522E07',
+                  color: 'black',
                   fontFamily: 'Oswald',
                 }}
               >
@@ -232,10 +238,11 @@ const DetailsPage: React.FC = () => {
                 variant="h5"
                 fontFamily="'Raleway', sans-serif"
                 align="center"
+                maxWidth="600px"
                 gutterBottom
               >
-                Thank you for your interest in our services.
-                <br />
+                Thank you for your interest in our services!
+                <br /> <br />
                 Please use the form below to get in touch with {name}. The
                 message will be reviewed and you will receive a reply as soon as
                 possible.
@@ -246,6 +253,7 @@ const DetailsPage: React.FC = () => {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
+                paddingTop: '5rem',
               }}
             >
               <Box
@@ -253,13 +261,22 @@ const DetailsPage: React.FC = () => {
                 sx={{
                   fontSize: '40px',
                   margin: '0',
-                  color: '#522E07',
+                  color: 'black',
                   fontFamily: 'Oswald',
                   textAlign: 'center',
                 }}
               >
                 Special knowledge
               </Box>
+              <Divider
+                sx={{
+                  width: '100%',
+                  margin: 'auto',
+                  marginTop: '1rem',
+                  marginBottom: '1rem',
+                  borderBottom: '3px solid rgba(0, 0, 0, 0.999)',
+                }}
+              />
               <Typography
                 variant="h6"
                 fontFamily="'Raleway', sans-serif"
