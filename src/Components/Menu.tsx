@@ -1,10 +1,9 @@
-import { Box, Divider } from '@mui/material';
+import { Box, Container, Divider, Link as MuiLink } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import {Link as MuiLink} from '@mui/material';
 
 export default function MenuBar() {
   return (
-    <Box
+    <Container
       sx={{
         color: '#FCF8EC',
         fontSize: '18px',
@@ -13,9 +12,9 @@ export default function MenuBar() {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        padding: '2rem',
+        marginTop: '2rem',
+        marginBottom: '2rem',
         alignItems: 'center',
-        maxWidth: '900px',
         width: '100%',
         boxSizing: 'border-box',
         zIndex: 10,
@@ -32,7 +31,11 @@ export default function MenuBar() {
         }}
       >
         <MuiLink href="#" color="inherit" fontSize={'2rem'}>
-          BW
+          <img
+            src="./src/assets/logoBright.png"
+            alt="logo"
+            style={{ height: '3.5rem' }}
+          />
         </MuiLink>
 
         <Divider
@@ -50,6 +53,10 @@ export default function MenuBar() {
           href="#team-section"
           color="inherit"
           underline="hover"
+          sx={{
+            textDecorationThickness: '0.05rem',
+            textUnderlineOffset: '0.15rem',
+          }}
           onClick={e => {
             e.preventDefault();
 
@@ -63,7 +70,7 @@ export default function MenuBar() {
             }
           }}
         >
-          The Team
+          The team
         </MuiLink>
 
         <MuiLink
@@ -71,6 +78,10 @@ export default function MenuBar() {
           to="/ProjectPage"
           color="inherit"
           underline="hover"
+          sx={{
+            textDecorationThickness: '0.05rem',
+            textUnderlineOffset: '0.15rem',
+          }}
         >
           Portfolio
         </MuiLink>
@@ -80,7 +91,11 @@ export default function MenuBar() {
         href="#contact-section"
         color="inherit"
         underline="hover"
-        onClick={(e: { preventDefault: () => void; }) => {
+        sx={{
+          textDecorationThickness: '0.05rem',
+          textUnderlineOffset: '0.15rem',
+        }}
+        onClick={(e: { preventDefault: () => void }) => {
           e.preventDefault();
 
           const contactSection = document.getElementById('contact-section');
@@ -95,6 +110,6 @@ export default function MenuBar() {
       >
         Contact us
       </MuiLink>
-    </Box>
+    </Container>
   );
 }
