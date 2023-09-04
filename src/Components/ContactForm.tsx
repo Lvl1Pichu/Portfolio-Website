@@ -1,13 +1,27 @@
 import {
+  Alert,
   Box,
   Button,
   Container,
   Divider,
+  Snackbar,
   TextField,
   Typography,
 } from "@mui/material";
+import React from "react";
 
 const ContactForm = () => {
+  const [openSnackbar, setOpenSnackbar] = React.useState(false);
+
+  const handleClose = () => {
+    setOpenSnackbar(false);
+  };
+
+  // const handleButtonClick = (e) => {
+  //   e.preventDefault(); // Prevent the default form submission behavior
+  //   setOpenSnackbar(true);
+  // };
+
   return (
     <Container maxWidth="lg">
       <Box
@@ -88,6 +102,7 @@ const ContactForm = () => {
             <Button
               type="submit"
               variant="contained"
+              onClick={() => setOpenSnackbar(true)}
               sx={{
                 boxShadow: "0 .125rem .625rem rgba(0, 0, 0, 0.2)",
                 backgroundColor: "#51583F",
@@ -105,6 +120,31 @@ const ContactForm = () => {
             >
               Send
             </Button>
+            <Snackbar
+              open={openSnackbar}
+              autoHideDuration={6000}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center",
+              }}
+            >
+              <Alert
+                onClose={handleClose}
+                severity="success"
+                sx={{
+                  width: "100%",
+                  "& .MuiSvgIcon-root": {
+                    fill: "#fff",
+                  },
+                  backgroundColor: "#51583F",
+                  fontFamily: "'Raleway', sans-serif",
+                  color: "white",
+                }}
+              >
+                Thank you for your message!
+              </Alert>
+            </Snackbar>
           </Box>
         </form>
       </Box>
