@@ -1,53 +1,65 @@
-import { Box, Container } from '@mui/material';
+import { Box, Container } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function TeamSection() {
+  const imageStyles = {
+    boxShadow: "0 .125rem .625rem rgba(0, 0, 0, 0.2)",
+    transition: "all 0.3s",
+    "&:hover": {
+      boxShadow: "0 .25rem 1.1rem rgba(0, 0, 0, 0.4)",
+      borderRadius: "2rem",
+    },
+  };
+
+
   return (
     <Container
       sx={{
-        '@media (max-width:400px)': {
-          padding: '0',
-          margin: '0 auto',
+        "@media (max-width:400px)": {
+          padding: "0",
+          margin: "0 auto",
         },
-        fontFamily: 'Raleway',
+        fontFamily: "Raleway",
       }}
+      id="team-section" 
     >
-      <Box component="h1" sx={{ fontSize: '64px', fontFamily: 'Oswald' }}>
+      <Box component="h1" sx={{ fontSize: "64px", fontFamily: "Oswald" }}>
         The team
       </Box>
-      <hr style={{ marginBottom: '2rem' }} />
+      <hr style={{ marginBottom: "2rem" }} />
 
       {/* Person 1 */}
 
       <Box
         sx={{
-          display: 'flex',
-          gap: '2rem',
-          marginTop: '4rem',
-          '@media (max-width:768px)': { flexDirection: 'column' },
+          display: "flex",
+          gap: "2rem",
+          marginTop: "4rem",
+          "@media (max-width:768px)": { flexDirection: "column" },
         }}
       >
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            '@media (max-width:768px)': { order: 2 },
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            "@media (max-width:768px)": { order: 2 },
           }}
         >
           <Box
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
+              display: "flex",
+              flexDirection: "column",
+              gap: "1.5rem",
             }}
           >
             <Box
               component="h2"
               sx={{
-                fontSize: '40px',
-                margin: '0',
-                color: '#522E07',
-                fontFamily: 'Oswald',
+                fontSize: "40px",
+                margin: "0",
+                color: "#522E07",
+                fontFamily: "Oswald",
               }}
             >
               Jenny Weijland
@@ -55,8 +67,8 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                fontSize: "24px",
+                "@media (max-width:768px)": { marginBottom: "1rem" },
               }}
             >
               Discover Jenny's realm: an adept in TypeScript, a maven in UX, and
@@ -65,14 +77,28 @@ function TeamSection() {
             </Box>
           </Box>
           <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+            {" "}
+            <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
+            <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
+              <Link
+                to={`/detailsPage/Jenny`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
             </Box>
           </Box>
         </Box>
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
           <img src="jenny.png" alt="" />
         </Box>
       </Box>
@@ -81,30 +107,35 @@ function TeamSection() {
 
       <Box
         sx={{
-          display: 'flex',
-          gap: '2rem',
-          marginTop: '4rem',
-          '@media (max-width:768px)': { flexDirection: 'column' },
+          display: "flex",
+          gap: "2rem",
+          marginTop: "4rem",
+          "@media (max-width:768px)": { flexDirection: "column" },
         }}
       >
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img style={{ objectFit: 'cover' }} src="carl.png" alt="" />
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
+          <img style={{ objectFit: "cover", }} src="carl.png" alt="" />
         </Box>
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
           }}
         >
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             <Box
               component="h2"
               sx={{
-                fontSize: '40px',
-                margin: '0',
-                color: '#522E07',
-                fontFamily: 'Oswald',
+                fontSize: "40px",
+                margin: "0",
+                color: "#522E07",
+                fontFamily: "Oswald",
               }}
             >
               Carl Hasselblad
@@ -112,8 +143,8 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                fontSize: "24px",
+                "@media (max-width:768px)": { marginBottom: "1rem" },
               }}
             >
               Meet Carl: a passionate UX enthusiast, TypeScript aficionado, and
@@ -124,10 +155,19 @@ function TeamSection() {
             </Box>
           </Box>
           <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+            {" "}
+            <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
+            <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
+              <Link
+                to={`/detailsPage/Carl`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
             </Box>
           </Box>
         </Box>
@@ -137,34 +177,34 @@ function TeamSection() {
 
       <Box
         sx={{
-          display: 'flex',
-          gap: '2rem',
-          marginTop: '4rem',
-          '@media (max-width:768px)': { flexDirection: 'column' },
+          display: "flex",
+          gap: "2rem",
+          marginTop: "4rem",
+          "@media (max-width:768px)": { flexDirection: "column" },
         }}
       >
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            '@media (max-width:768px)': { order: 2 },
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            "@media (max-width:768px)": { order: 2 },
           }}
         >
           <Box
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
+              display: "flex",
+              flexDirection: "column",
+              gap: "1.5rem",
             }}
           >
             <Box
               component="h2"
               sx={{
-                fontSize: '40px',
-                margin: '0',
-                color: '#522E07',
-                fontFamily: 'Oswald',
+                fontSize: "40px",
+                margin: "0",
+                color: "#522E07",
+                fontFamily: "Oswald",
               }}
             >
               Sebastian Johansson
@@ -172,8 +212,8 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                fontSize: "24px",
+                "@media (max-width:768px)": { marginBottom: "1rem" },
               }}
             >
               Step into Sebbe's domain: the ultimate coding maestro, fluent in
@@ -184,20 +224,28 @@ function TeamSection() {
             </Box>
           </Box>
           <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box
-              component="span"
-              sx={{
-                fontSize: '20px',
-                cursor: 'pointer',
-              }}
-            >
-              READ MORE!
+            {" "}
+            <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
+            <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
+              <Link
+                to={`/detailsPage/Sebastian`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
             </Box>
           </Box>
         </Box>
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
           <img src="sebbe.png" alt="" />
         </Box>
       </Box>
@@ -206,30 +254,35 @@ function TeamSection() {
 
       <Box
         sx={{
-          display: 'flex',
-          gap: '2rem',
-          marginTop: '4rem',
-          '@media (max-width:768px)': { flexDirection: 'column' },
+          display: "flex",
+          gap: "2rem",
+          marginTop: "4rem",
+          "@media (max-width:768px)": { flexDirection: "column" },
         }}
       >
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img style={{ objectFit: 'cover' }} src="linus.png" alt="" />
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
+          <img style={{ objectFit: "cover" }} src="linus.png" alt="" />
         </Box>
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
           }}
         >
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             <Box
               component="h2"
               sx={{
-                fontSize: '40px',
-                margin: '0',
-                color: '#522E07',
-                fontFamily: 'Oswald',
+                fontSize: "40px",
+                margin: "0",
+                color: "#522E07",
+                fontFamily: "Oswald",
               }}
             >
               Linus Hammarberg
@@ -237,8 +290,8 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                fontSize: "24px",
+                "@media (max-width:768px)": { marginBottom: "1rem" },
               }}
             >
               Meet Linus: a passionate UX enthusiast, TypeScript aficionado, and
@@ -249,10 +302,19 @@ function TeamSection() {
             </Box>
           </Box>
           <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+            {" "}
+            <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
+            <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
+              <Link
+                to={`/detailsPage/Linus`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
             </Box>
           </Box>
         </Box>
@@ -262,34 +324,34 @@ function TeamSection() {
 
       <Box
         sx={{
-          display: 'flex',
-          gap: '2rem',
-          marginTop: '4rem',
-          '@media (max-width:768px)': { flexDirection: 'column' },
+          display: "flex",
+          gap: "2rem",
+          marginTop: "4rem",
+          "@media (max-width:768px)": { flexDirection: "column" },
         }}
       >
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            '@media (max-width:768px)': { order: 2 },
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            "@media (max-width:768px)": { order: 2 },
           }}
         >
           <Box
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
+              display: "flex",
+              flexDirection: "column",
+              gap: "1.5rem",
             }}
           >
             <Box
               component="h2"
               sx={{
-                fontSize: '40px',
-                margin: '0',
-                color: '#522E07',
-                fontFamily: 'Oswald',
+                fontSize: "40px",
+                margin: "0",
+                color: "#522E07",
+                fontFamily: "Oswald",
               }}
             >
               Nathalie Gustafsson
@@ -297,8 +359,8 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
-                '@media (max-width:768px)': { marginBottom: '1rem' },
+                fontSize: "24px",
+                "@media (max-width:768px)": { marginBottom: "1rem" },
               }}
             >
               Welcome to Nathalie's board: where Swift meets Figma and
@@ -308,21 +370,30 @@ function TeamSection() {
             </Box>
           </Box>
           <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box
-              component="span"
-              sx={{
-                fontSize: '20px',
-                cursor: 'pointer',
-              }}
-            >
-              READ MORE!
-            </Box>
+            <img style={{ marginRight: "1rem" }} src="arrow.png" alt="" />
+            <Box component="span" sx={{ fontSize: "20px", cursor: "pointer" }}>
+              <Link
+                to={`/detailsPage/Nathalie`}
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                }}
+              >
+                READ MORE!
+              </Link>
+            </Box>{" "}
           </Box>
         </Box>
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img src="nathalie.png" alt="" />
+        <Box
+          sx={{
+            ...imageStyles,
+            "@media (max-width:768px)": { margin: "0 auto" },
+          }}
+        >
+          <img src="nathalie.png" alt="" style={{
+            ...imageStyles }
+          } />
         </Box>
       </Box>
     </Container>
