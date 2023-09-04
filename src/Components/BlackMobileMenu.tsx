@@ -1,5 +1,6 @@
-import { Box, Button, Divider, Link, Menu, MenuItem } from "@mui/material";
-import { useState } from "react";
+import { Box, Button, Divider, Link as MuiLink, Menu, MenuItem } from '@mui/material';
+import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 
 export default function BlackMobileMenu() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -11,50 +12,69 @@ export default function BlackMobileMenu() {
     setAnchorEl(null);
   };
 
+  const navigateToContactSection = () => {
+    handleClose();
+    // First navigate to the homepage
+    const navigationEvent = new PopStateEvent('popstate');
+    window.history.pushState({}, '', '/');
+    window.dispatchEvent(navigationEvent);
+
+    // Add a slight delay to ensure that the HomePage component has rendered
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }, 100);
+  };
+
   return (
     <Box
       sx={{
-        color: "black", // Updated color here
-        fontSize: "18px",
-        fontFamily: "Raleway",
-        fontWeight: "500",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        padding: "2rem",
-        alignItems: "center",
-        maxWidth: "900px",
-        width: "100%",
-        boxSizing: "border-box",
+        color: 'black',
+        fontSize: '18px',
+        fontFamily: 'Raleway',
+        fontWeight: '500',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: '2rem',
+        alignItems: 'center',
+        maxWidth: '900px',
+        width: '100%',
+        boxSizing: 'border-box',
         zIndex: 10,
       }}
     >
       <Box>
-        <Link href="#" color="inherit" fontSize={"2rem"}>
+        <MuiLink component={RouterLink} to="/" color="inherit" fontSize={'2rem'}>
           BW
-        </Link>
+        </MuiLink>
         <Divider
           orientation="vertical"
           variant="middle"
           flexItem
           sx={{
-            borderColor: "black", // Updated borderColor here
-            padding: "0",
-            margin: "0",
+            borderColor: 'black',
+            padding: '0',
+            margin: '0',
           }}
         />
       </Box>
       <Button
         id="demo-positioned-button"
-        aria-controls={open ? "demo-positioned-menu" : undefined}
+        aria-controls={open ? 'demo-positioned-menu' : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         sx={{
-          color: "black", // Updated color here
-          fontSize: "18px",
-          fontFamily: "Raleway",
-          fontWeight: "500",
+          color: 'black',
+          fontSize: '18px',
+          fontFamily: 'Raleway',
+          fontWeight: '500',
         }}
       >
         Menu
@@ -66,27 +86,27 @@ export default function BlackMobileMenu() {
         open={open}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: "top",
-          horizontal: "left",
+          vertical: 'top',
+          horizontal: 'left',
         }}
         transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
+          vertical: 'top',
+          horizontal: 'left',
         }}
         PaperProps={{
           sx: {
-            backgroundColor: "black", // Updated backgroundColor here
-            color: "white" // Assuming you want the text to be visible on the black background
+            backgroundColor: 'black',
+            color: 'white',
           },
         }}
       >
-        <MenuItem onClick={handleClose} sx={{ fontFamily: "Raleway" }}>
+        <MenuItem component={RouterLink} to="/" onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
           The team
         </MenuItem>
-        <MenuItem onClick={handleClose} sx={{ fontFamily: "Raleway" }}>
+        <MenuItem component={RouterLink} to="/ProjectPage" onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
           Portfolio
         </MenuItem>
-        <MenuItem onClick={handleClose} sx={{ fontFamily: "Raleway" }}>
+        <MenuItem onClick={navigateToContactSection} sx={{ fontFamily: 'Raleway' }}>
           Contact us
         </MenuItem>
       </Menu>
