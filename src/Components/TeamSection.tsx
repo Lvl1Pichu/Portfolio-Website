@@ -1,4 +1,4 @@
-import { Box, CardMedia, Typography } from '@mui/material';
+import { Box, CardMedia, Link, Typography } from '@mui/material';
 
 function TeamSection() {
   return (
@@ -92,8 +92,10 @@ function TeamSection() {
               landscapes, she crafts experiences as serene as a woodland trail.
             </Box>
           </Box>
-          <Box>
-            {' '}
+          <Link
+            href="/detailsPage/jenny"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
             <img
               style={{ marginRight: '1rem', height: '0.6rem' }}
               src="arrow.png"
@@ -102,7 +104,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '15px',
+                fontSize: '16px',
                 cursor: 'pointer',
                 '&:hover': {
                   textDecoration: 'underline',
@@ -113,7 +115,7 @@ function TeamSection() {
             >
               READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box
           sx={{
@@ -202,8 +204,10 @@ function TeamSection() {
               companionship.
             </Box>
           </Box>
-          <Box>
-            {' '}
+          <Link
+            href="/detailsPage/carl"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
             <img
               style={{ marginRight: '1rem', height: '0.6rem' }}
               src="arrow.png"
@@ -212,7 +216,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '15px',
+                fontSize: '16px',
                 cursor: 'pointer',
                 '&:hover': {
                   textDecoration: 'underline',
@@ -223,7 +227,7 @@ function TeamSection() {
             >
               READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
       </Box>
 
@@ -281,8 +285,10 @@ function TeamSection() {
               tech and technique.
             </Box>
           </Box>
-          <Box>
-            {' '}
+          <Link
+            href="/detailsPage/sebastian"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
             <img
               style={{ marginRight: '1rem', height: '0.6rem' }}
               src="arrow.png"
@@ -291,7 +297,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '15px',
+                fontSize: '16px',
                 cursor: 'pointer',
                 '&:hover': {
                   textDecoration: 'underline',
@@ -302,7 +308,7 @@ function TeamSection() {
             >
               READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
           <CardMedia
@@ -387,8 +393,10 @@ function TeamSection() {
               companionship.
             </Box>
           </Box>
-          <Box>
-            {' '}
+          <Link
+            href="/detailsPage/linus"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
             <img
               style={{ marginRight: '1rem', height: '0.6rem' }}
               src="arrow.png"
@@ -397,7 +405,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '15px',
+                fontSize: '16px',
                 cursor: 'pointer',
                 '&:hover': {
                   textDecoration: 'underline',
@@ -408,7 +416,7 @@ function TeamSection() {
             >
               READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
       </Box>
 
@@ -465,8 +473,10 @@ function TeamSection() {
               every move is a winning one.
             </Box>
           </Box>
-          <Box>
-            {' '}
+          <Link
+            href="/detailsPage/nathalie"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
             <img
               style={{ marginRight: '1rem', height: '0.6rem' }}
               src="arrow.png"
@@ -475,7 +485,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '15px',
+                fontSize: '16px',
                 cursor: 'pointer',
                 '&:hover': {
                   textDecoration: 'underline',
@@ -486,7 +496,7 @@ function TeamSection() {
             >
               READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
           <CardMedia
