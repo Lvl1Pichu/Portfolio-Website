@@ -7,8 +7,8 @@ import {
   Snackbar,
   TextField,
   Typography,
-} from "@mui/material";
-import React from "react";
+} from '@mui/material';
+import React from 'react';
 
 const ContactForm = () => {
   const [openSnackbar, setOpenSnackbar] = React.useState(false);
@@ -17,19 +17,14 @@ const ContactForm = () => {
     setOpenSnackbar(false);
   };
 
-  // const handleButtonClick = (e) => {
-  //   e.preventDefault(); // Prevent the default form submission behavior
-  //   setOpenSnackbar(true);
-  // };
-
   return (
     <Container maxWidth="lg">
       <Box
         sx={{
-          textAlign: "start",
-          marginBottom: "20px",
+          textAlign: 'start',
+          marginBottom: '20px',
         }}
-        id="contact-section" 
+        id="contact-section"
       >
         <Typography variant="h3" fontFamily="'Oswald', regular">
           Contact us
@@ -37,11 +32,11 @@ const ContactForm = () => {
 
         <Divider
           sx={{
-            width: "100%",
-            margin: "auto",
-            marginTop: "2%",
-            marginBottom: "8%",
-            borderBottom: "3px solid rgba(0, 0, 0, 0.999)",
+            width: '100%',
+            margin: 'auto',
+            marginTop: '2%',
+            marginBottom: '8%',
+            borderBottom: '3px solid rgba(0, 0, 0, 0.999)',
           }}
         />
       </Box>
@@ -59,12 +54,12 @@ const ContactForm = () => {
       {/* Formuläret */}
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "start",
-          minHeight: "100vh",
-          marginTop: "40px",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'start',
+          minHeight: '100vh',
+          marginTop: '40px',
         }}
       >
         <form>
@@ -74,7 +69,7 @@ const ContactForm = () => {
             margin="normal"
             fullWidth
             id="name"
-            sx={{ width: "100%" }}
+            sx={{ width: '100%' }}
             required
           />
 
@@ -99,23 +94,23 @@ const ContactForm = () => {
             required
           />
 
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <Button
               type="submit"
               variant="contained"
               onClick={() => setOpenSnackbar(true)}
               sx={{
-                boxShadow: "0 .125rem .625rem rgba(0, 0, 0, 0.2)",
-                backgroundColor: "#51583F",
-                color: "#fff",
-                borderRadius: "0",
-                width: "100%",
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                backgroundColor: '#51583F',
+                color: '#fff',
+                borderRadius: '0',
+                width: '100%',
                 fontFamily: "'Raleway', sans-serif",
-                marginTop: "20px",
-                "&:hover": {
-                  backgroundColor: "#6C784E",
-                  boxShadow: "0 .25rem 1.1rem rgba(0, 0, 0, 0.4)",
-                  borderRadius: "2rem",
+                marginTop: '20px',
+                '&:hover': {
+                  backgroundColor: '#6C784E',
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
                 },
               }}
             >
@@ -123,24 +118,24 @@ const ContactForm = () => {
             </Button>
             <Snackbar
               open={openSnackbar}
-              autoHideDuration={6000}
+              autoHideDuration={4000}
               onClose={handleClose}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "center",
+                vertical: 'bottom',
+                horizontal: 'center',
               }}
             >
               <Alert
                 onClose={handleClose}
                 severity="success"
                 sx={{
-                  width: "100%",
-                  "& .MuiSvgIcon-root": {
-                    fill: "#fff",
+                  width: '100%',
+                  '& .MuiSvgIcon-root': {
+                    fill: '#fff',
                   },
-                  backgroundColor: "#51583F",
+                  backgroundColor: '#51583F',
                   fontFamily: "'Raleway', sans-serif",
-                  color: "white",
+                  color: 'white',
                 }}
               >
                 Thank you for your message!
