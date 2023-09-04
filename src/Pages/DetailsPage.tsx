@@ -166,12 +166,12 @@ const DetailsPage: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
-                height: '15rem',
+                height: isSmallScreen ? '10rem' : '15rem',
               }}
             >
               <Box
                 sx={{
-                  width: isSmallScreen ? '60%' : '30%',
+                  width: isSmallScreen ? '40%' : '30%',
                   marginRight: '1rem',
                   backgroundImage: `url(${image})`,
                   backgroundSize: 'cover',
