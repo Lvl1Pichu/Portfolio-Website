@@ -1,8 +1,7 @@
-import { Box, Divider, Link as MuiLink } from '@mui/material';
+import { Box, Container, Divider, Link as MuiLink } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 export default function BlackMenu() {
-
   const navigateToSection = (sectionId: string) => {
     // First navigate to the homepage
     const navigationEvent = new PopStateEvent('popstate');
@@ -22,80 +21,98 @@ export default function BlackMenu() {
   };
 
   return (
-    <Box
-      sx={{
-        color: 'black',
-        fontSize: '18px',
-        fontFamily: 'Raleway',
-        fontWeight: '500',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        padding: '2rem',
-        alignItems: 'center',
-        maxWidth: '900px',
-        width: '100%',
-        boxSizing: 'border-box',
-        zIndex: 10,
-      }}
-    >
+    <Container>
       <Box
         sx={{
+          color: 'black',
+          fontSize: '18px',
+          fontFamily: 'Raleway',
+          fontWeight: '500',
           display: 'flex',
-          alignItems: 'center',
+          flexDirection: 'row',
           justifyContent: 'space-between',
-          width: '300px',
-          padding: '0',
-          height: '60px',
+          alignItems: 'center',
+          width: '100%',
+          mt: "2rem",
+          mb: "2rem",
+          boxSizing: 'border-box',
+          zIndex: 10,
         }}
       >
-        <MuiLink
-          component={RouterLink}
-          to="/"
-          color="inherit"
-          fontSize={'2rem'}
-        >
-          BW
-        </MuiLink>
-        <Divider
-          orientation="vertical"
-          variant="middle"
-          flexItem
+        <Box
           sx={{
-            borderColor: 'black',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '300px',
             padding: '0',
-            margin: '0',
+            height: '60px',
           }}
-        />
+        >
+          <MuiLink
+            component={RouterLink}
+            to="/"
+            color="inherit"
+            fontSize={'2rem'}
+          >
+            <img
+              src="./src/assets/logoo.png"
+              alt="logo"
+              style={{ height: '3.5rem' }}
+            />
+          </MuiLink>
+          <Divider
+            orientation="vertical"
+            variant="middle"
+            flexItem
+            sx={{
+              borderColor: 'black',
+              padding: '0',
+              margin: '0',
+            }}
+          />
+          <MuiLink
+            onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+              e.preventDefault();
+              navigateToSection('team-section');
+            }}
+            color="inherit"
+            underline="hover"
+            sx={{
+              textDecorationThickness: '0.05rem',
+              textUnderlineOffset: '0.15rem',
+            }}
+          >
+            The team
+          </MuiLink>
+          <MuiLink
+            component={RouterLink}
+            to="/"
+            color="inherit"
+            underline="hover"
+            sx={{
+              textDecorationThickness: '0.05rem',
+              textUnderlineOffset: '0.15rem',
+            }}
+          >
+            Home
+          </MuiLink>
+        </Box>
         <MuiLink
           onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
             e.preventDefault();
-            navigateToSection('team-section');
+            navigateToSection('contact-section');
           }}
           color="inherit"
           underline="hover"
+          sx={{
+            textDecorationThickness: '0.05rem',
+            textUnderlineOffset: '0.15rem',
+          }}
         >
-          The Team
-        </MuiLink>
-        <MuiLink
-          component={RouterLink}
-          to="/"
-          color="inherit"
-          underline="hover"
-        >
-          Home
+          Contact us
         </MuiLink>
       </Box>
-      <MuiLink
-        onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-          e.preventDefault();
-          navigateToSection('contact-section');
-        }}
-        color="inherit"
-        underline="hover"
-      >
-        Contact us
-      </MuiLink>
-    </Box>
+    </Container>
   );
 }
