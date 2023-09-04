@@ -44,15 +44,42 @@ export default function MenuBar() {
           }}
         />
 
-        <Link href="#" color="inherit" underline="hover">
-          The team
+        <Link href="#team-section" color="inherit" underline="hover"
+          onClick={(e) => {
+            e.preventDefault(); 
+
+            const contactSection = document.getElementById("team-section"); 
+
+            if (contactSection) {
+              contactSection.scrollIntoView({
+                behavior: "smooth", 
+                block: "start",     
+              });
+            }
+          }}
+        >
+          The Team
         </Link>
+        
         <Link href="#" color="inherit" underline="hover">
           Portfolio
         </Link>
       </Box>
 
-      <Link href="#" color="inherit" underline="hover">
+      <Link href="#contact-section" color="inherit" underline="hover"
+         onClick={(e) => {
+          e.preventDefault(); 
+
+          const contactSection = document.getElementById("contact-section"); 
+
+          if (contactSection) {
+            contactSection.scrollIntoView({
+              behavior: "smooth", 
+              block: "start",     
+            });
+          }
+        }}
+      >
         Contact us
       </Link>
     </Box>
