@@ -1,15 +1,16 @@
 import {
   Box,
   Divider,
+  Link,
   Typography,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import BlackMenu from '../Components/BlackMenu';
+import BlackMobileMenu from '../Components/BlackMobileMenu';
 import ContactFormDetail from '../Components/ContactFormDetail';
-import MenuBar from '../Components/Menu';
-import MobileMenu from '../Components/MobileMenu';
 import Footer from '../Components/footer'; // Adjust the path as needed based on your project structure
 
 const DetailsPage: React.FC = () => {
@@ -89,7 +90,15 @@ const DetailsPage: React.FC = () => {
 
   return (
     <>
-      <header>{isSmallScreen ? <MobileMenu /> : <MenuBar />}</header>
+      <header
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        {isSmallScreen ? <BlackMobileMenu /> : <BlackMenu />}
+      </header>{' '}
       <main>
         <Box
           sx={{
@@ -109,21 +118,36 @@ const DetailsPage: React.FC = () => {
               alignItems: 'center',
             }}
           >
-            <Link to="/">
+            <Link
+              href="/"
+              sx={{
+                display: 'flex',
+                gap: '0.7rem',
+                alignItems: 'center',
+                marginBottom: '5rem',
+                cursor: 'pointer',
+                color: 'black',
+                textDecoration: 'none',
+                flexDirection: 'row',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
               <img
                 src="../../src/assets/arrowLeft.png"
-                alt="back"
-                width="50px"
+                alt="arrow"
+                style={{ height: '0.6rem' }}
               />
-            </Link>
-            <Link to="/">
               <Typography
-                variant="h6"
-                fontFamily="'Raleway', sans-serif"
-                align="left"
-                paddingLeft="1rem"
+                sx={{
+                  fontFamily: 'Raleway',
+                  fontSize: '15px',
+                }}
               >
-                Go back
+                GO BACK
               </Typography>
             </Link>
           </Box>
