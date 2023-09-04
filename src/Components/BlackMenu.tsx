@@ -1,12 +1,12 @@
 import { Box, Divider } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import {Link as MuiLink} from '@mui/material';
+import { Link as MuiLink } from '@mui/material';
 
-export default function MenuBar() {
+export default function BlackMenu() {
   return (
     <Box
       sx={{
-        color: '#FCF8EC',
+        color: 'black', // Changed color here
         fontSize: '18px',
         fontFamily: 'Raleway',
         fontWeight: '500',
@@ -40,7 +40,7 @@ export default function MenuBar() {
           variant="middle"
           flexItem
           sx={{
-            borderColor: '#FCF8EC',
+            borderColor: 'black', // Changed borderColor here
             padding: '0',
             margin: '0',
           }}

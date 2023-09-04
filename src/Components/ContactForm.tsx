@@ -8,6 +8,7 @@ const ContactForm = () => {
           textAlign: 'start',
           marginBottom: '20px',
         }}
+        id="contact-section" 
       >
         <Box
           sx={{
