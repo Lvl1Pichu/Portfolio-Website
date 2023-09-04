@@ -1,90 +1,162 @@
-import React from "react";
-import { Container, Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Logo from "../assets/Logo.png";
+import Logo from '../assets/Logo.png';
 
 const Footer: React.FC = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleNavigation = (path: string) => {
-      navigate(path);
-    };
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
 
-    return (
+  return (
+    <Box
+      sx={{
+        height: '586px',
+        backgroundColor: 'rgba(81, 88, 63, 0.56)',
+        color: 'black',
+        width: '100%',
+        overflowX: 'hidden',
+      }}
+    >
+      <Box>
+        {/* <Container maxWidth={false} style={{ width: '100%' }}> */}
         <Box
-            sx={{
-                height: '586px',
-                backgroundColor: "rgba(81, 88, 63, 0.56)",
-                color: "black",
-                padding: 2,
-            }}
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            // width: '100%',
+          }}
         >
-            <Container maxWidth={false} style={{ width: '100%' }}>
-                <Box display="flex" justifyContent="space-between" alignItems="flex-start">
-                    <img src={Logo} alt="Logo" style={{ marginRight: 'auto' }} />
-                    <Box display="flex">
-                        <Box mr="144px">
-                            <Typography 
-                                variant="h6" 
-                                sx={{ marginTop: '127px', marginBottom: '43px', fontWeight: 'bold', fontSize: '30px', fontFamily: 'Raleway, sans-serif'
-                            }}
-                            >
-                                Company
-                            </Typography>
-                            <Typography 
-                                variant="body2" 
-                                sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: 'light', fontFamily: 'Raleway, sans-serif' }}
-                            >
-                                About us
-                            </Typography>
-                            <Typography 
-                                variant="body2" 
-                                sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}
-                            >
-                                Careers
-                            </Typography>
-                            <Typography 
-                                variant="body2" 
-                                onClick={() => handleNavigation('/ProjectPage')}
-                                style={{ cursor: 'pointer' }}
-                                sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}
-                            >
-                                Our Projects
-                            </Typography>
-                        </Box>
-                        <Box>
-                            <Typography 
-                                variant="h6" 
-                                sx={{ marginTop: '127px', marginBottom: '43px', fontWeight: 'bold', fontSize: '30px', fontFamily: 'Raleway, sans-serif' }}
-                            >
-                                Help
-                            </Typography>
-                            <Typography 
-                                variant="body2" 
-                                onClick={() => handleNavigation('/ContactPage')}
-                                style={{ cursor: 'pointer' }}
-                                sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}
-                            >
-                                Contact
-                            </Typography>
-                            <Typography 
-                                variant="body2" 
-                                sx={{ marginBottom: '43px', fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}
-                            >
-                                Support
-                            </Typography>
-                            <Typography 
-                                variant="body2" 
-                                sx={{ fontSize: '30px', fontWeight: '300', fontFamily: 'Raleway, sans-serif' }}
-                            >
-                                Our future
-                            </Typography>
-                        </Box>
-                    </Box>
-                </Box>
-            </Container>
+          <img
+            src={Logo}
+            alt="Logo"
+            style={{ marginLeft: '32px', marginTop: '32px' }}
+          />
+          <Box
+            display="flex"
+            sx={{
+              marginRight: '2rem',
+              '@media (max-width:768px)': { marginRight: '32px' },
+            }}
+          >
+            <Box
+              sx={{
+                marginRight: '144px',
+                '@media (max-width:768px)': { margin: '0' },
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  marginTop: '127px',
+                  marginBottom: '43px',
+                  fontWeight: 'bold',
+                  fontSize: '30px',
+                  fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
+                }}
+              >
+                Company
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  marginBottom: '43px',
+                  fontSize: '30px',
+                  fontWeight: 'light',
+                  fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
+                }}
+              >
+                About us
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  marginBottom: '43px',
+                  fontSize: '30px',
+                  fontWeight: '300',
+                  fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
+                }}
+              >
+                Careers
+              </Typography>
+              <Typography
+                variant="body2"
+                onClick={() => handleNavigation('/ProjectPage')}
+                style={{ cursor: 'pointer' }}
+                sx={{
+                  marginBottom: '43px',
+                  fontSize: '30px',
+                  fontWeight: '300',
+                  fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
+                }}
+              >
+                Our Projects
+              </Typography>
+            </Box>
+            <Box sx={{ '@media (max-width: 768px)': { marginLeft: '2rem' } }}>
+              <Typography
+                variant="h6"
+                sx={{
+                  marginTop: '127px',
+                  marginBottom: '43px',
+                  fontWeight: 'bold',
+                  fontSize: '30px',
+                  fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
+                }}
+              >
+                Help
+              </Typography>
+              <Typography
+                variant="body2"
+                onClick={() => handleNavigation('/ContactPage')}
+                style={{ cursor: 'pointer' }}
+                sx={{
+                  marginBottom: '43px',
+                  fontSize: '30px',
+                  fontWeight: '300',
+                  fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
+                }}
+              >
+                Contact
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  marginBottom: '43px',
+                  fontSize: '30px',
+                  fontWeight: '300',
+                  fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
+                }}
+              >
+                Support
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: '30px',
+                  fontWeight: '300',
+                  fontFamily: 'Raleway, sans-serif',
+                  '@media (max-width:768px)': { fontSize: '24px' },
+                }}
+              >
+                Our future
+              </Typography>
+            </Box>
+          </Box>
         </Box>
-    );
+      </Box>
+    </Box>
+  );
 };
 
 export default Footer;

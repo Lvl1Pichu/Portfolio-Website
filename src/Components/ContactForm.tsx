@@ -1,14 +1,11 @@
 import {
-  Alert,
   Box,
   Button,
   Container,
   Divider,
-  Snackbar,
   TextField,
   Typography,
-} from '@mui/material';
-import React from 'react';
+} from "@mui/material";
 
 const ContactForm = () => {
   const [openSnackbar, setOpenSnackbar] = React.useState(false);
@@ -18,7 +15,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Container maxWidth="lg">
+    <Box>
       <Box
         sx={{
           textAlign: 'start',
@@ -26,19 +23,25 @@ const ContactForm = () => {
         }}
         id="contact-section"
       >
-        <Typography variant="h3" fontFamily="'Oswald', regular">
-          Contact us
-        </Typography>
-
-        <Divider
+        <Box
           sx={{
             width: '100%',
-            margin: 'auto',
-            marginTop: '2%',
-            marginBottom: '8%',
-            borderBottom: '3px solid rgba(0, 0, 0, 0.999)',
+            borderBottom: '0.15rem solid black',
+            marginBottom: '5rem',
+            paddingBottom: '1rem',
           }}
-        />
+        >
+          <Typography
+            variant="h2"
+            sx={{
+              fontFamily: 'Oswald',
+              fontWeight: '400',
+              '@media (max-width:768px)': { fontSize: '32px' },
+            }}
+          >
+            Contact
+          </Typography>
+        </Box>
       </Box>
 
       <Typography
@@ -58,7 +61,7 @@ const ContactForm = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'start',
-          minHeight: '100vh',
+          marginBottom: '100px',
           marginTop: '40px',
         }}
       >
@@ -144,7 +147,7 @@ const ContactForm = () => {
           </Box>
         </form>
       </Box>
-    </Container>
+    </Box>
   );
 };
 
