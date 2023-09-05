@@ -32,7 +32,7 @@ export default function MenuBar() {
       >
         <MuiLink href="#" color="inherit" fontSize={'2rem'}>
           <img
-            src="./src/assets/logoBright.png"
+            src="./logoBright.png"
             alt="logo"
             style={{ height: '3.5rem' }}
           />

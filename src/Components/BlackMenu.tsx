@@ -56,7 +56,7 @@ export default function BlackMenu() {
             fontSize={'2rem'}
           >
             <img
-              src="./src/assets/logoo.png"
+              src="https://github.com/Lvl1Pichu/Portfolio-Website/assets/113519935/280ba183-7ade-4664-b297-8594691f9ced"
               alt="logo"
               style={{ height: '3.5rem' }}
             />
