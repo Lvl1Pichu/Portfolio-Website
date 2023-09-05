@@ -1,10 +1,18 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import 'animate.css';
 import MenuBar from './Menu';
 import MobileMenu from './MobileMenu';
 
 export default function HeaderSection() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+  function scrollToProduct() {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    });
+  }
 
   return (
     <Box
@@ -23,6 +31,12 @@ export default function HeaderSection() {
         alignItems: 'center',
       }}
     >
+      <span
+        onClick={() => scrollToProduct()}
+        className="material-symbols-outlined chevron animate__animated animate__pulse animate__infinite"
+      >
+        expand_more
+      </span>
       {isSmallScreen ? <MobileMenu /> : <MenuBar />}
 
       <Box
