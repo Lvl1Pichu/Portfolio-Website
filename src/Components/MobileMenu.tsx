@@ -1,5 +1,5 @@
-import { Box, Button, Divider, Link, Menu, MenuItem } from "@mui/material";
-import { useState } from "react";
+import { Box, Button, Divider, Link, Menu, MenuItem } from '@mui/material';
+import { useState } from 'react';
 
 export default function MobileMenu() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -14,47 +14,51 @@ export default function MobileMenu() {
   return (
     <Box
       sx={{
-        color: "#FCF8EC",
-        fontSize: "18px",
-        fontFamily: "Raleway",
-        fontWeight: "500",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        padding: "2rem",
-        alignItems: "center",
-        maxWidth: "900px",
-        width: "100%",
-        boxSizing: "border-box",
+        color: '#FCF8EC',
+        fontSize: '18px',
+        fontFamily: 'Raleway',
+        fontWeight: '500',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: '2rem',
+        alignItems: 'center',
+        maxWidth: '900px',
+        width: '100%',
+        boxSizing: 'border-box',
         zIndex: 10,
       }}
     >
       <Box>
-        <Link href="#" color="inherit" fontSize={"2rem"}>
-          BW
+        <Link href="#" color="inherit" fontSize={'2rem'}>
+          <img
+            src="./src/assets/logoBright.png"
+            alt="logo"
+            style={{ height: '3.5rem' }}
+          />
         </Link>
         <Divider
           orientation="vertical"
           variant="middle"
           flexItem
           sx={{
-            borderColor: "#FCF8EC",
-            padding: "0",
-            margin: "0",
+            borderColor: '#FCF8EC',
+            padding: '0',
+            margin: '0',
           }}
         />
       </Box>
       <Button
         id="demo-positioned-button"
-        aria-controls={open ? "demo-positioned-menu" : undefined}
+        aria-controls={open ? 'demo-positioned-menu' : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         sx={{
-          color: "#FCF8EC",
-          fontSize: "18px",
-          fontFamily: "Raleway",
-          fontWeight: "500",
+          color: '#FCF8EC',
+          fontSize: '18px',
+          fontFamily: 'Raleway',
+          fontWeight: '500',
         }}
       >
         Menu
@@ -66,26 +70,26 @@ export default function MobileMenu() {
         open={open}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: "top",
-          horizontal: "left",
+          vertical: 'top',
+          horizontal: 'left',
         }}
         transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
+          vertical: 'top',
+          horizontal: 'left',
         }}
         PaperProps={{
           sx: {
-            backgroundColor: "#FCF8EC",
+            backgroundColor: '#FCF8EC',
           },
         }}
       >
-        <MenuItem onClick={handleClose} sx={{ fontFamily: "Raleway" }}>
+        <MenuItem onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
           The team
         </MenuItem>
-        <MenuItem onClick={handleClose} sx={{ fontFamily: "Raleway" }}>
+        <MenuItem onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
           Portfolio
         </MenuItem>
-        <MenuItem onClick={handleClose} sx={{ fontFamily: "Raleway" }}>
+        <MenuItem onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
           Contact us
         </MenuItem>
       </Menu>
