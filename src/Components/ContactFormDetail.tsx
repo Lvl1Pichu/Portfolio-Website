@@ -28,6 +28,7 @@ const ContactFormDetail = () => {
             id="name"
             sx={{ width: '100%' }}
             required
+            autoFocus
           />
 
           <TextField
