@@ -9,28 +9,34 @@ import {
 
 const projects = [
   {
-    title: 'ZET Webshop',
-    image: './src/assets/portfolio-imgs/zet.jpeg',
+    title: 'Aime',
+    image: './src/assets/portfolio-imgs/aime.png',
+    link: 'https://aime.co/en/',
   },
   {
     title: 'Nordic Knots',
     image: './src/assets/portfolio-imgs/nordic.jpeg',
+    link: 'https://nordicknots.com/se',
   },
   {
-    title: 'URoom E-commerce',
-    image: './src/assets/portfolio-imgs/furniture.png',
+    title: 'Marbodal',
+    image: './src/assets/portfolio-imgs/marbodal.jpeg',
+    link: 'https://www.marbodal.se/',
   },
   {
     title: 'The Nue Co.',
     image: './src/assets/portfolio-imgs/thenue.jpeg',
+    link: 'https://www.thenueco.com/',
   },
   {
-    title: 'Aime',
-    image: './src/assets/portfolio-imgs/aime.png',
+    title: 'Veloretti Bikes',
+    image: './src/assets/portfolio-imgs/veloretti.jpeg',
+    link: 'https://www.veloretti.com/',
   },
   {
-    title: 'Smartly Home App',
-    image: './src/assets/portfolio-imgs/smartHome.png',
+    title: 'Volvo',
+    image: './src/assets/portfolio-imgs/volvo.jpeg',
+    link: 'https://www.volvocars.com/se/',
   },
 ];
 
@@ -107,24 +113,31 @@ function Portfolio() {
           >
             {projects.map(project => (
               <Grid key={project.title} item xs={12} sm={6} md={4}>
-                <CardMedia
-                  component="img"
-                  image={project.image}
-                  alt="Project Image"
-                  sx={{
-                    width: '100%',
-                    height: '32rem',
-                    objectFit: 'cover',
-                    cursor: 'pointer',
-                    boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
-                    transition: '0.15s',
-                    '&:hover': {
-                      boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
-                      borderRadius: '2rem',
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <CardMedia
+                    component="img"
+                    image={project.image}
+                    alt="Project Image"
+                    sx={{
+                      width: '100%',
+                      height: '32rem',
+                      objectFit: 'cover',
+                      cursor: 'pointer',
+                      boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
                       transition: '0.15s',
-                    },
-                  }}
-                />
+                      '&:hover': {
+                        boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                        borderRadius: '2rem',
+                        transition: '0.15s',
+                      },
+                    }}
+                  />
+                </Link>
                 <Box
                   sx={{
                     display: 'flex',
