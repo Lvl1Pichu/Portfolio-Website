@@ -1,6 +1,22 @@
 import { Box, Typography } from '@mui/material';
+import { FaReact, FaSwift, FaFigma, FaSass } from 'react-icons/fa'; // Import the relevant icons
 
 function TeamSection() {
+
+  const iconContainerStyles = {
+    position: 'absolute',
+    bottom: '0',
+    left: '0',
+    right: '0',
+    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    display: 'flex',
+    gap: '1rem',
+    padding: '0.5rem',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+
+  
   return (
     <Box
       sx={{
@@ -102,10 +118,17 @@ function TeamSection() {
         </Box>
         <Box
           sx={{
-            '@media (max-width:768px)': { margin: '0 auto', maxWidth: '100wv' },
+            position: 'relative',
+            '@media (max-width:768px)': { margin: '0 auto' },
           }}
         >
-          <img style={{}} src="jenny.png" alt="" />
+          <img src="jenny.png" alt="" />
+          <Box sx={{ ...iconContainerStyles }}>
+            <FaReact size={24} />{' '}
+            {/* Using React icon as a placeholder for TypeScript */}
+            <FaFigma size={24} /> {/* Using Figma for UX */}
+            {/* Add PHP icon here once available */}
+          </Box>
         </Box>
       </Box>
 
@@ -119,8 +142,18 @@ function TeamSection() {
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img style={{ objectFit: 'cover' }} src="carl.png" alt="" />
+        <Box
+          sx={{
+            position: 'relative',
+            '@media (max-width:768px)': { margin: '0 auto' },
+          }}
+        >
+          <img src="carl.png" alt="" />
+          <Box sx={{ ...iconContainerStyles }}>
+            <FaReact size={24} />{' '}
+            {/* Using React icon as a placeholder for TypeScript */}
+            <FaFigma size={24} /> {/* Using Figma for UX */}
+          </Box>
         </Box>
         <Box
           sx={{
@@ -237,8 +270,18 @@ function TeamSection() {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
+        <Box
+          sx={{
+            position: 'relative',
+            '@media (max-width:768px)': { margin: '0 auto' },
+          }}
+        >
           <img src="sebbe.png" alt="" />
+          <Box sx={{ ...iconContainerStyles }}>
+            <FaReact size={24} />{' '}
+            {/* Using React icon as a representative for coding */}
+            {/* Add more icons as needed */}
+          </Box>
         </Box>
       </Box>
 
@@ -252,8 +295,18 @@ function TeamSection() {
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <img style={{ objectFit: 'cover' }} src="linus.png" alt="" />
+        <Box
+          sx={{
+            position: 'relative',
+            '@media (max-width:768px)': { margin: '0 auto' },
+          }}
+        >
+          <img src="linus.png" alt="" />
+          <Box sx={{ ...iconContainerStyles }}>
+            <FaReact size={24} />{' '}
+            {/* Using React icon as a placeholder for TypeScript */}
+            <FaFigma size={24} /> {/* Using Figma for UX */}
+          </Box>
         </Box>
         <Box
           sx={{
@@ -303,7 +356,6 @@ function TeamSection() {
       </Box>
 
       {/* Person 5 */}
-
       <Box
         sx={{
           display: 'flex',
@@ -349,14 +401,13 @@ function TeamSection() {
                 },
               }}
             >
-              Welcome to Nathalie's board: where Swift meets Figma and
-              TypeScript dances to the rhythm of Scrum. An expert with a
-              penchant for board games, she designs and strategizes, ensuring
-              every move is a winning one.
+              Welcome to Nathalie's board: where Swift meets Figma and React
+              dances to the rhythm of Scrum. An expert with a penchant for board
+              games, she designs and strategizes, ensuring every move is a
+              winning one.
             </Box>
           </Box>
           <Box>
-            {' '}
             <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
             <Box
               component="span"
@@ -369,12 +420,36 @@ function TeamSection() {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
+        <Box
+          sx={{
+            position: 'relative',
+            '@media (max-width:768px)': { margin: '0 auto' },
+          }}
+        >
           <img src="nathalie.png" alt="" />
+
+          <Box
+            sx={{
+              position: 'absolute',
+              bottom: '0',
+              left: '0',
+              right: '0',
+              backgroundColor: 'rgba(255, 255, 255, 0.4)',
+              display: 'flex',
+              gap: '1rem',
+              padding: '0.5rem',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <FaReact size={24} />
+            <FaSwift size={24} />
+            <FaFigma size={24} />
+            <FaSass size={24} />
+          </Box>
         </Box>
       </Box>
     </Box>
   );
 }
-
 export default TeamSection;
