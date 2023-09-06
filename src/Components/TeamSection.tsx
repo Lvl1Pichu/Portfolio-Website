@@ -2,6 +2,7 @@ import { Box, CardMedia, Link, Typography } from '@mui/material';
 import { FaReact, FaFigma, FaSwift, FaJira, FaSass } from 'react-icons/fa';
 
 function TeamSection() {
+  
   return (
     <Box
       sx={{
@@ -572,7 +573,6 @@ function TeamSection() {
       </Box>
 
       {/* Person 5 */}
-
       <Box
         sx={{
           display: 'flex',
@@ -627,10 +627,10 @@ function TeamSection() {
                 },
               }}
             >
-              Welcome to Nathalie's board: where Swift meets Figma and
-              TypeScript dances to the rhythm of Scrum. An expert with a
-              penchant for board games, she designs and strategizes, ensuring
-              every move is a winning one.
+              Welcome to Nathalie's board: where Swift meets Figma and React
+              dances to the rhythm of Scrum. An expert with a penchant for board
+              games, she designs and strategizes, ensuring every move is a
+              winning one.
             </Box>
           </Box>
           <Link
@@ -712,5 +712,4 @@ function TeamSection() {
     </Box>
   );
 }
-
 export default TeamSection;
