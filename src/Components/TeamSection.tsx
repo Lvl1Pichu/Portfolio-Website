@@ -75,7 +75,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Jenny Weijland
+              <Link
+                href="/detailsPage/Jenny"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Jenny Weijland
+              </Link>
             </Box>
             <Box
               component="span"
@@ -193,7 +202,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Carl Hasselblad
+              <Link
+                href="/detailsPage/Carl"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Carl Hasselblad
+              </Link>
             </Box>
             <Box
               component="span"
@@ -274,7 +292,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Sebastian Johansson
+              <Link
+                href="/detailsPage/Sebastian"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Sebastian Johansson
+              </Link>
             </Box>
             <Box
               component="span"
@@ -390,7 +417,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Linus Hammarberg
+              <Link
+                href="/detailsPage/Linus"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Linus Hammarberg
+              </Link>
             </Box>
             <Box
               component="span"
@@ -471,7 +507,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Nathalie Gustafsson
+              <Link
+                href="/detailsPage/Nathalie"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Nathalie Gustafsson
+              </Link>
             </Box>
             <Box
               component="span"
