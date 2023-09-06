@@ -196,7 +196,7 @@ const DetailsPage: React.FC = () => {
                   {name}
                 </Box>
                 <Typography
-                  variant={isSmallScreen ? 'h7' : 'h6'}
+                  variant={isSmallScreen ? 'h6' : 'h5'}
                   fontFamily="'Raleway', sans-serif"
                   align="left"
                   gutterBottom
