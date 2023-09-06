@@ -75,7 +75,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Jenny Weijland
+              <Link
+                href="/detailsPage/Jenny"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Jenny Weijland
+              </Link>
             </Box>
             <Box
               component="span"
@@ -93,7 +102,7 @@ function TeamSection() {
             </Box>
           </Box>
           <Link
-            href="/detailsPage/jenny"
+            href="/detailsPage/Jenny"
             sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
           >
             <img
@@ -122,7 +131,7 @@ function TeamSection() {
             '@media (max-width:768px)': { margin: '0 auto', maxWidth: '100wv' },
           }}
         >
-          <Link href="/detailsPage/jenny">
+          <Link href="/detailsPage/Jenny">
             <CardMedia
               component="img"
               image="./jenny.png"
@@ -155,7 +164,7 @@ function TeamSection() {
         }}
       >
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <Link href="/detailsPage/carl">
+          <Link href="/detailsPage/Carl">
             <CardMedia
               component="img"
               image="./carl.png"
@@ -193,7 +202,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Carl Hasselblad
+              <Link
+                href="/detailsPage/Carl"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Carl Hasselblad
+              </Link>
             </Box>
             <Box
               component="span"
@@ -213,7 +231,7 @@ function TeamSection() {
             </Box>
           </Box>
           <Link
-            href="/detailsPage/carl"
+            href="/detailsPage/Carl"
             sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
           >
             <img
@@ -274,7 +292,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Sebastian Johansson
+              <Link
+                href="/detailsPage/Sebastian"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Sebastian Johansson
+              </Link>
             </Box>
             <Box
               component="span"
@@ -294,7 +321,7 @@ function TeamSection() {
             </Box>
           </Box>
           <Link
-            href="/detailsPage/sebastian"
+            href="/detailsPage/Sebastian"
             sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
           >
             <img
@@ -319,7 +346,7 @@ function TeamSection() {
           </Link>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <Link href="/detailsPage/sebastian">
+          <Link href="/detailsPage/Sebastian">
             <CardMedia
               component="img"
               image="./sebbe.png"
@@ -352,7 +379,7 @@ function TeamSection() {
         }}
       >
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <Link href="/detailsPage/linus">
+          <Link href="/detailsPage/Linus">
             <CardMedia
               component="img"
               image="./linus.png"
@@ -390,7 +417,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Linus Hammarberg
+              <Link
+                href="/detailsPage/Linus"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Linus Hammarberg
+              </Link>
             </Box>
             <Box
               component="span"
@@ -410,7 +446,7 @@ function TeamSection() {
             </Box>
           </Box>
           <Link
-            href="/detailsPage/linus"
+            href="/detailsPage/Linus"
             sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
           >
             <img
@@ -471,7 +507,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Nathalie Gustafsson
+              <Link
+                href="/detailsPage/Nathalie"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Nathalie Gustafsson
+              </Link>
             </Box>
             <Box
               component="span"
@@ -490,7 +535,7 @@ function TeamSection() {
             </Box>
           </Box>
           <Link
-            href="/detailsPage/nathalie"
+            href="/detailsPage/Nathalie"
             sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
           >
             <img
@@ -515,7 +560,7 @@ function TeamSection() {
           </Link>
         </Box>
         <Box sx={{ '@media (max-width:768px)': { margin: '0 auto' } }}>
-          <Link href="/detailsPage/nathalie">
+          <Link href="/detailsPage/Nathalie">
             <CardMedia
               component="img"
               image="./nathalie.png"
