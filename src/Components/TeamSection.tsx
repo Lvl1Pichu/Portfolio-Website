@@ -1,22 +1,7 @@
-import { Box, Typography } from '@mui/material';
-import { FaReact, FaSwift, FaFigma, FaSass } from 'react-icons/fa'; // Import the relevant icons
+import { Box, CardMedia, Link, Typography } from '@mui/material';
+import { FaReact, FaFigma, FaSwift, FaJira, FaSass } from 'react-icons/fa';
 
 function TeamSection() {
-
-  const iconContainerStyles = {
-    position: 'absolute',
-    bottom: '0',
-    left: '0',
-    right: '0',
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
-    display: 'flex',
-    gap: '1rem',
-    padding: '0.5rem',
-    alignItems: 'center',
-    justifyContent: 'center',
-  };
-
-  
   return (
     <Box
       sx={{
@@ -91,7 +76,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Jenny Weijland
+              <Link
+                href="/detailsPage/Jenny"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Jenny Weijland
+              </Link>
             </Box>
             <Box
               component="span"
@@ -108,25 +102,75 @@ function TeamSection() {
               landscapes, she crafts experiences as serene as a woodland trail.
             </Box>
           </Box>
-          <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+          <Link
+            href="/detailsPage/Jenny"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
+            <Box
+              component="span"
+              sx={{
+                fontSize: '16px',
+                cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
-        <Box
-          sx={{
-            position: 'relative',
-            '@media (max-width:768px)': { margin: '0 auto' },
-          }}
-        >
-          <img src="jenny.png" alt="" />
-          <Box sx={{ ...iconContainerStyles }}>
-            <FaReact size={24} />{' '}
-            <FaFigma size={24} /> 
-          </Box>
+        <Box sx={{position: 'relative', '@media (max-width:768px)': { margin: '0 auto' } }}>
+          <Link href="/detailsPage/Jenny"  sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none'}}>
+            <CardMedia
+              component="img"
+              image="./jenny.png"
+              alt="Jenny"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+             <Box
+              sx={{
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                right: '0',
+                backgroundColor: 'rgba(255, 255, 255, 0.4)',
+                display: 'flex',
+                gap: '1rem',
+                padding: '0.5rem',
+                alignItems: 'center',
+                justifyContent: 'center',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            >
+              <FaSwift size={24} />
+              <FaFigma size={24} />
+              <FaReact size={24} />{' '}
+              <FaJira size={24} /> 
+            </Box>
+          </Link>
         </Box>
       </Box>
 
@@ -140,17 +184,50 @@ function TeamSection() {
           '@media (max-width:768px)': { flexDirection: 'column' },
         }}
       >
-        <Box
-          sx={{
-            position: 'relative',
-            '@media (max-width:768px)': { margin: '0 auto' },
-          }}
-        >
-          <img src="carl.png" alt="" />
-          <Box sx={{ ...iconContainerStyles }}>
-            <FaReact size={24} />{' '}
-            <FaFigma size={24} />
-          </Box>
+        <Box sx={{position: 'relative', '@media (max-width:768px)': { margin: '0 auto' } }}>
+          <Link href="/detailsPage/Carl" sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none'}}>
+            <CardMedia
+              component="img"
+              image="./carl.png"
+              alt="Carl"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+             <Box
+              sx={{
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                right: '0',
+                backgroundColor: 'rgba(255, 255, 255, 0.4)',
+                display: 'flex',
+                gap: '1rem',
+                padding: '0.5rem',
+                alignItems: 'center',
+                justifyContent: 'center',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            >
+              <FaSwift size={24} />
+              <FaFigma size={24} />
+              <FaReact size={24} />{' '}
+              <FaJira size={24} /> 
+            </Box>
+          </Link>
         </Box>
         <Box
           sx={{
@@ -170,7 +247,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Carl Hasselblad
+              <Link
+                href="/detailsPage/Carl"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Carl Hasselblad
+              </Link>
             </Box>
             <Box
               component="span"
@@ -189,13 +275,30 @@ function TeamSection() {
               companionship.
             </Box>
           </Box>
-          <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+          <Link
+            href="/detailsPage/Carl"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
+            <Box
+              component="span"
+              sx={{
+                fontSize: '16px',
+                cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
       </Box>
 
@@ -234,7 +337,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Sebastian Johansson
+              <Link
+                href="/detailsPage/Sebastian"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Sebastian Johansson
+              </Link>
             </Box>
             <Box
               component="span"
@@ -253,30 +365,75 @@ function TeamSection() {
               tech and technique.
             </Box>
           </Box>
-          <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
+          <Link
+            href="/detailsPage/Sebastian"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none'}}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
             <Box
               component="span"
               sx={{
-                fontSize: '20px',
+                fontSize: '16px',
                 cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
               }}
             >
-              READ MORE!
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
-        <Box
-          sx={{
-            position: 'relative',
-            '@media (max-width:768px)': { margin: '0 auto' },
-          }}
-        >
-          <img src="sebbe.png" alt="" />
-          <Box sx={{ ...iconContainerStyles }}>
-            <FaReact size={24} />{' '}
-          </Box>
+        <Box sx={{position: 'relative', '@media (max-width:768px)': { margin: '0 auto' } }}>
+          <Link href="/detailsPage/Sebastian" sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none'}}>
+            <CardMedia
+              component="img"
+              image="./sebbe.png"
+              alt="Sebastian"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+            <Box
+              sx={{
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                right: '0',
+                backgroundColor: 'rgba(255, 255, 255, 0.4)',
+                display: 'flex',
+                gap: '1rem',
+                padding: '0.5rem',
+                alignItems: 'center',
+                justifyContent: 'center',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            >
+              <FaSwift size={24} />
+              <FaFigma size={24} />
+              <FaReact size={24} />{' '}
+              <FaJira size={24} /> 
+            </Box>
+          </Link>
         </Box>
       </Box>
 
@@ -296,11 +453,50 @@ function TeamSection() {
             '@media (max-width:768px)': { margin: '0 auto' },
           }}
         >
-          <img src="linus.png" alt="" />
-          <Box sx={{ ...iconContainerStyles }}>
-            <FaReact size={24} />{' '}
-            <FaFigma size={24} />
-          </Box>
+          <Link href="/detailsPage/Linus" sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none'}}>
+            <CardMedia
+              component="img"
+              image="./linus.png"
+              alt="Linus"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+            <Box
+              sx={{
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                right: '0',
+                backgroundColor: 'rgba(255, 255, 255, 0.4)',
+                display: 'flex',
+                gap: '1rem',
+                padding: '0.5rem',
+                alignItems: 'center',
+                justifyContent: 'center',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            >
+              <FaSwift size={24} />
+              <FaFigma size={24} />
+              <FaReact size={24} />{' '}
+              {/* Using React icon as a placeholder for TypeScript */}
+              <FaJira size={24} /> {/* Using Jira as a placeholder for Scrum */}
+            </Box>
+          </Link>
         </Box>
         <Box
           sx={{
@@ -320,7 +516,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Linus Hammarberg
+              <Link
+                href="/detailsPage/Linus"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Linus Hammarberg
+              </Link>
             </Box>
             <Box
               component="span"
@@ -339,17 +544,35 @@ function TeamSection() {
               companionship.
             </Box>
           </Box>
-          <Box>
-            {' '}
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
-            <Box component="span" sx={{ fontSize: '20px', cursor: 'pointer' }}>
-              READ MORE!
+          <Link
+            href="/detailsPage/Linus"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
+            <Box
+              component="span"
+              sx={{
+                fontSize: '16px',
+                cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
+              }}
+            >
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
       </Box>
 
       {/* Person 5 */}
+
       <Box
         sx={{
           display: 'flex',
@@ -383,7 +606,16 @@ function TeamSection() {
                 '@media (max-width:768px)': { fontSize: '24px' },
               }}
             >
-              Nathalie Gustafsson
+              <Link
+                href="/detailsPage/Nathalie"
+                sx={{
+                  cursor: 'pointer',
+                  color: '#522E07',
+                  textDecoration: 'none',
+                }}
+              >
+                Nathalie Gustafsson
+              </Link>
             </Box>
             <Box
               component="span"
@@ -395,24 +627,36 @@ function TeamSection() {
                 },
               }}
             >
-              Welcome to Nathalie's board: where Swift meets Figma and React
-              dances to the rhythm of Scrum. An expert with a penchant for board
-              games, she designs and strategizes, ensuring every move is a
-              winning one.
+              Welcome to Nathalie's board: where Swift meets Figma and
+              TypeScript dances to the rhythm of Scrum. An expert with a
+              penchant for board games, she designs and strategizes, ensuring
+              every move is a winning one.
             </Box>
           </Box>
-          <Box>
-            <img style={{ marginRight: '1rem' }} src="arrow.png" alt="" />
+          <Link
+            href="/detailsPage/Nathalie"
+            sx={{ cursor: 'pointer', color: 'black', textDecoration: 'none' }}
+          >
+            <img
+              style={{ marginRight: '1rem', height: '0.6rem' }}
+              src="arrow.png"
+              alt=""
+            />
             <Box
               component="span"
               sx={{
-                fontSize: '20px',
+                fontSize: '16px',
                 cursor: 'pointer',
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '0.05rem',
+                  textUnderlineOffset: '0.15rem',
+                },
               }}
             >
-              READ MORE!
+              READ MORE
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box
           sx={{
@@ -420,8 +664,25 @@ function TeamSection() {
             '@media (max-width:768px)': { margin: '0 auto' },
           }}
         >
-          <img src="nathalie.png" alt="" />
-
+          <Link href="/detailsPage/Nathalie">
+            <CardMedia
+              component="img"
+              image="./nathalie.png"
+              alt="Nathalie"
+              sx={{
+                width: '20rem',
+                height: '20rem',
+                cursor: 'pointer',
+                boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
+                transition: '0.15s',
+                '&:hover': {
+                  boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                  borderRadius: '2rem',
+                  transition: '0.15s',
+                },
+              }}
+            />
+          </Link>
           <Box
             sx={{
               position: 'absolute',
@@ -434,16 +695,22 @@ function TeamSection() {
               padding: '0.5rem',
               alignItems: 'center',
               justifyContent: 'center',
+              '&:hover': {
+                boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
+                borderRadius: '2rem',
+                transition: '0.15s',
+              },
             }}
           >
-            <FaReact size={24} />
             <FaSwift size={24} />
             <FaFigma size={24} />
-            <FaSass size={24} />
+            <FaReact size={24} />
+            <FaJira size={24} />
           </Box>
         </Box>
       </Box>
     </Box>
   );
 }
+
 export default TeamSection;
