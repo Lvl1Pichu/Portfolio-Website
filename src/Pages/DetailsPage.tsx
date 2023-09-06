@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import BlackMenu from '../Components/BlackMenu';
 import BlackMobileMenu from '../Components/BlackMobileMenu';
@@ -84,6 +84,10 @@ const DetailsPage: React.FC = () => {
       description = 'Default description';
       image = 'deafult.png';
   }
+
+  useEffect(() => {
+    document.title = `Best Website | ${name}`;
+  }, []);
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -192,15 +196,29 @@ const DetailsPage: React.FC = () => {
                   {name}
                 </Box>
                 <Typography
-                  variant={isSmallScreen ? 'h7' : 'h6'}
+                  variant={isSmallScreen ? 'h6' : 'h5'}
                   fontFamily="'Raleway', sans-serif"
                   align="left"
                   gutterBottom
                 >
                   {titles}
                   <br />
-                  {email} <br />
-                  {phone}
+                  <a
+                    href={`mailto:${email}`}
+                    style={{
+                      textDecoration: 'none',
+                      color: 'black',
+                    }}
+                  >
+                    {email}
+                  </a>
+                  <br />
+                  <a
+                    href={`tel:${phone}`}
+                    style={{ textDecoration: 'none', color: 'black' }}
+                  >
+                    {phone}
+                  </a>
                   <br />
                 </Typography>
               </Box>
@@ -223,7 +241,7 @@ const DetailsPage: React.FC = () => {
                   fontFamily: 'Oswald',
                 }}
               >
-                Get in touch!
+                Get in touch with {name}!
               </Box>
               <Divider
                 sx={{
