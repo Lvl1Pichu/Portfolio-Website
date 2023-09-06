@@ -11,6 +11,7 @@ const MapComponent: React.FC = () => {
         flexDirection: 'column',
         alignItems: 'center',
         marginBottom: '5rem',
+        marginTop: "5rem",
       }}
     >
       <Box
