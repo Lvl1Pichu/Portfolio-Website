@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import BlackMenu from '../Components/BlackMenu';
 import BlackMobileMenu from '../Components/BlackMobileMenu';
@@ -84,6 +84,10 @@ const DetailsPage: React.FC = () => {
       description = 'Default description';
       image = 'deafult.png';
   }
+
+  useEffect(() => {
+    document.title = `Best Website | ${name}`;
+  }, []);
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
