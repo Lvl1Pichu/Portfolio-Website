@@ -266,13 +266,13 @@ const DetailsPage: React.FC = () => {
                 flexDirection: 'column',
                 textAlign: 'center',
                 alignItems: 'center',
-                paddingTop: '5rem',
+                marginTop: '5rem',
               }}
             >
               <Box
                 component="h2"
                 sx={{
-                  fontSize: '40px',
+                  fontSize: { xs: '30px', sm: '40px' },
                   margin: '0',
                   color: 'black',
                   fontFamily: 'Oswald',
@@ -314,7 +314,7 @@ const DetailsPage: React.FC = () => {
               <Box
                 component="h2"
                 sx={{
-                  fontSize: '40px',
+                  fontSize: { xs: '30px', sm: '40px' },
                   margin: '0',
                   color: 'black',
                   fontFamily: 'Oswald',
@@ -350,6 +350,7 @@ const DetailsPage: React.FC = () => {
                   sx={{
                     width: { xs: '100%', sm: '90%' },
                     fontSize: '18px',
+                    textAlign: { xs: 'center', sm: 'left' },
                   }}
                 >
                   {descriptionSection1}
@@ -361,6 +362,7 @@ const DetailsPage: React.FC = () => {
                   sx={{
                     width: { xs: '100%', sm: '90%' },
                     fontSize: '18px',
+                    textAlign: { xs: 'center', sm: 'left' },
                   }}
                 >
                   {descriptionSection2}
