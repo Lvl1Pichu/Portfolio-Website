@@ -16,6 +16,18 @@ footer {
   width:100vw;
   overflow-x: hidden;
 }
+
+.chevron {
+  position:absolute;
+  left: calc(50% - 40px); 
+  bottom:3%;
+  font-size: 5rem;
+  color: white;
+  z-index: 20;
+}
+.chevron:hover {
+  cursor: pointer;
+}
 html {
   overflow-x: hidden;
 }
