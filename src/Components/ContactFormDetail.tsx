@@ -1,15 +1,25 @@
-import { Box, Button, Container, TextField } from '@mui/material';
+import { Alert, Box, Button, Snackbar, TextField } from '@mui/material';
+import { useState } from 'react';
 
-const ContactFormDetail = () => {
+const ContactForm = () => {
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleClose = () => {
+    setOpenSnackbar(false);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setOpenSnackbar(true);
+    setName('');
+    setEmail('');
+    setMessage('');
+  };
   return (
-    <Container maxWidth="lg">
-      <Box
-        sx={{
-          textAlign: 'start',
-        }}
-        id="contact-section"
-      ></Box>
-
+    <Box id="contact-section">
       {/* Formuläret */}
       <Box
         sx={{
@@ -17,18 +27,21 @@ const ContactFormDetail = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'start',
+          marginBottom: '100px',
+          marginTop: '40px',
         }}
       >
-        <form>
+        <form onSubmit={handleSubmit}>
           <TextField
             variant="standard"
             label="Name"
             margin="normal"
             fullWidth
             id="name"
+            value={name}
+            onChange={e => setName(e.target.value)}
             sx={{ width: '100%' }}
             required
-            autoFocus
           />
 
           <TextField
@@ -38,6 +51,8 @@ const ContactFormDetail = () => {
             fullWidth
             id="email"
             type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             required
           />
 
@@ -49,6 +64,8 @@ const ContactFormDetail = () => {
             multiline
             rows={1}
             id="message"
+            value={message}
+            onChange={e => setMessage(e.target.value)}
             required
           />
 
@@ -73,11 +90,36 @@ const ContactFormDetail = () => {
             >
               Send
             </Button>
+            <Snackbar
+              open={openSnackbar}
+              autoHideDuration={4000}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'center',
+              }}
+            >
+              <Alert
+                onClose={handleClose}
+                severity="success"
+                sx={{
+                  width: '100%',
+                  '& .MuiSvgIcon-root': {
+                    fill: '#fff',
+                  },
+                  backgroundColor: '#51583F',
+                  fontFamily: "'Raleway', sans-serif",
+                  color: 'white',
+                }}
+              >
+                Thank you for your message!
+              </Alert>
+            </Snackbar>
           </Box>
         </form>
       </Box>
-    </Container>
+    </Box>
   );
 };
 
-export default ContactFormDetail;
+export default ContactForm;
