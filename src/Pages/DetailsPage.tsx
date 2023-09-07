@@ -11,7 +11,7 @@ import { useParams } from 'react-router-dom';
 import BlackMenu from '../Components/BlackMenu';
 import BlackMobileMenu from '../Components/BlackMobileMenu';
 import ContactFormDetail from '../Components/ContactFormDetail';
-import Footer from '../Components/footer'; // Adjust the path as needed based on your project structure
+import Footer2 from '../Components/footer2';
 
 const DetailsPage: React.FC = () => {
   interface PersonDetailParams {
@@ -308,7 +308,7 @@ const DetailsPage: React.FC = () => {
         </Box>
       </main>
       <footer>
-        <Footer />
+        <Footer2 />
       </footer>
     </>
   );
