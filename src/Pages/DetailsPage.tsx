@@ -130,6 +130,7 @@ const DetailsPage: React.FC = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            marginBottom: '2rem',
           }}
         >
           <Box
@@ -261,23 +262,24 @@ const DetailsPage: React.FC = () => {
                   fontFamily: 'Oswald',
                 }}
               >
-                Get in touch with {name}!
+                Get in touch with {name}
               </Box>
               <Divider
                 sx={{
                   width: '100%',
                   margin: 'auto',
                   marginTop: '1rem',
-                  marginBottom: '1rem',
+                  marginBottom: '2rem',
                   borderBottom: '0.15rem solid rgba(0, 0, 0, 0.999)',
                 }}
               />
               <Typography
-                variant="h5"
+                fontWeight={400}
                 fontFamily="'Raleway', sans-serif"
                 align="center"
                 maxWidth="600px"
                 gutterBottom
+                sx={{fontSize: "18px"}}
               >
                 Thank you for your interest in our services!
                 <br /> <br />
@@ -291,7 +293,6 @@ const DetailsPage: React.FC = () => {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                paddingTop: '5rem',
               }}
             >
               <Box
@@ -320,7 +321,7 @@ const DetailsPage: React.FC = () => {
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '1.5rem',
-                  marginTop: '1rem',
+                  marginTop: '2rem',
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}
