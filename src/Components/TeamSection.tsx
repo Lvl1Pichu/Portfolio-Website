@@ -79,7 +79,7 @@ function TeamSection() {
                 href="/detailsPage/Jenny"
                 sx={{
                   cursor: 'pointer',
-                  color: '#522E07',
+                  color: 'black',
                   textDecoration: 'none',
                 }}
               >
@@ -89,7 +89,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
+                fontSize: '20px',
                 '@media (max-width:768px)': {
                   marginBottom: '1rem',
                   fontSize: '16px',
@@ -206,7 +206,7 @@ function TeamSection() {
                 href="/detailsPage/Carl"
                 sx={{
                   cursor: 'pointer',
-                  color: '#522E07',
+                  color: 'black',
                   textDecoration: 'none',
                 }}
               >
@@ -216,7 +216,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
+                fontSize: '20px',
                 '@media (max-width:768px)': {
                   marginBottom: '1rem',
                   fontSize: '16px',
@@ -296,7 +296,7 @@ function TeamSection() {
                 href="/detailsPage/Sebastian"
                 sx={{
                   cursor: 'pointer',
-                  color: '#522E07',
+                  color: 'black',
                   textDecoration: 'none',
                 }}
               >
@@ -306,7 +306,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
+                fontSize: '20px',
                 '@media (max-width:768px)': {
                   marginBottom: '1rem',
                   fontSize: '16px',
@@ -421,7 +421,7 @@ function TeamSection() {
                 href="/detailsPage/Linus"
                 sx={{
                   cursor: 'pointer',
-                  color: '#522E07',
+                  color: 'black',
                   textDecoration: 'none',
                 }}
               >
@@ -431,7 +431,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
+                fontSize: '20px',
                 '@media (max-width:768px)': {
                   marginBottom: '1rem',
                   fontSize: '16px',
@@ -511,7 +511,7 @@ function TeamSection() {
                 href="/detailsPage/Nathalie"
                 sx={{
                   cursor: 'pointer',
-                  color: '#522E07',
+                  color: 'black',
                   textDecoration: 'none',
                 }}
               >
@@ -521,7 +521,7 @@ function TeamSection() {
             <Box
               component="span"
               sx={{
-                fontSize: '24px',
+                fontSize: '20px',
                 '@media (max-width:768px)': {
                   marginBottom: '1rem',
                   fontSize: '16px',
