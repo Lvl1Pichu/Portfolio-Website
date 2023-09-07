@@ -1,3 +1,4 @@
+import MenuIcon from '@mui/icons-material/Menu';
 import {
   Box,
   Button,
@@ -93,7 +94,7 @@ export default function BlackMobileMenu() {
           fontWeight: '500',
         }}
       >
-        Menu
+        <MenuIcon />
       </Button>
       <Menu
         id="demo-positioned-menu"
