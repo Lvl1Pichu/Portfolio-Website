@@ -23,7 +23,6 @@ const HomePage: React.FC = () => {
         </Container>
       </main>
       <footer>
-        {/* <Footer /> */}
         <Footer2 />
       </footer>
     </div>
