@@ -16,6 +16,7 @@ footer {
   width:100vw;
   overflow-x: hidden;
 }
+
 .chevron {
   position:absolute;
   left: calc(50% - 40px); 
@@ -26,4 +27,7 @@ footer {
 }
 .chevron:hover {
   cursor: pointer;
+}
+html {
+  overflow-x: hidden;
 }

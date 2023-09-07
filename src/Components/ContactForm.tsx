@@ -5,8 +5,8 @@ import {
   Snackbar,
   TextField,
   Typography,
-} from "@mui/material";
-import React from "react";
+} from '@mui/material';
+import React from 'react';
 
 const ContactForm = () => {
   const [openSnackbar, setOpenSnackbar] = React.useState(false);
@@ -102,7 +102,7 @@ const ContactForm = () => {
             <Button
               type="submit"
               variant="contained"
-              onClick={() => setOpenSnackbar(true)}
+              onSubmit={() => setOpenSnackbar(true)}
               sx={{
                 boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
                 backgroundColor: '#51583F',
