@@ -31,7 +31,12 @@ function Footer2() {
       <Container
         sx={{ position: 'relative', paddingTop: '32px', paddingBottom: '32px' }}
       >
-        <MuiLink href="#" color="inherit" fontSize={'2rem'}>
+        <MuiLink
+          href="#"
+          color="inherit"
+          fontSize={'2rem'}
+          sx={{ position: 'absolute', top: '24px', left: '32px' }}
+        >
           <img
             src="https://github.com/Lvl1Pichu/Portfolio-Website/assets/117076586/fc4bda46-b9cc-4e75-904b-59db3c2b1111"
             alt="logo"
