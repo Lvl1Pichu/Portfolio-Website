@@ -12,12 +12,15 @@ import BlackMenu from '../Components/BlackMenu';
 import BlackMobileMenu from '../Components/BlackMobileMenu';
 import ContactFormDetail from '../Components/ContactFormDetail';
 import Footer2 from '../Components/footer2';
+import { FaReact, FaSwift, FaFigma, FaSass } from 'react-icons/fa';
 
 const DetailsPage: React.FC = () => {
   interface PersonDetailParams {
     [key: string]: string | undefined;
     name: string;
   }
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { name } = useParams<PersonDetailParams>();
   let description = '';
@@ -25,6 +28,7 @@ const DetailsPage: React.FC = () => {
   let titles = '';
   let email = '';
   let phone = '';
+  let personIcon = null;
 
   switch (name) {
     case 'Nathalie':
@@ -36,6 +40,14 @@ const DetailsPage: React.FC = () => {
       titles = 'Creative lead/Code genius';
       email = 'nathalie@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
       break;
     case 'Jenny':
       description = `Discover Jenny's realm: an adept in TypeScript, a maven in UX, and a PHP enthusiast. Merging her love for nature with digital landscapes, she crafts experiences as serene as a woodland trail. A seasoned traveler of both physical and digital terrains, Jenny possesses a unique ability to intuitively connect user expectations with technical nuances.
@@ -46,6 +58,14 @@ const DetailsPage: React.FC = () => {
       titles = 'Creative lead/ UX Design';
       email = 'jenny@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
       break;
     case 'Sebastian':
       description = `Step into Sebbe's domain: the ultimate coding maestro, fluent in every programming dialect. His passion for martial arts mirrors his approach to code - precise, powerful, and always ahead of the game. As the alpha in every room, Sebbe commands respect in both tech and technique. In the vast digital landscape, he's the samurai who wields the sword of syntax with unmatched finesse.
@@ -56,6 +76,14 @@ const DetailsPage: React.FC = () => {
       titles = ' UX Design / Code genius';
       email = 'sebastian@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
       break;
     case 'Linus':
       description = ` Meet Linus: a passionate UX enthusiast, TypeScript aficionado, and a loyal dog lover. With a flair for user-centric design and code precision, he finds joy in every wagging tail and pixel-perfect interface. Dive into his world where creativity meets canine companionship, and where every design has the heart of a story to tell.
@@ -68,6 +96,15 @@ const DetailsPage: React.FC = () => {
       titles = 'Creative lead/  Code genius';
       email = 'linus@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
+
       break;
     case 'Carl':
       description = `Step into Carl's realm: a fusion of vibrant visuals and harmonious sounds. As an astute graphic designer with a deep love for music, he orchestrates pixels and beats in a symphony of experiences. Known to many as the "Maestro of Multimedia", Carl crafts designs that not only capture the eye but also resonate with the soul.
@@ -79,6 +116,14 @@ const DetailsPage: React.FC = () => {
       titles = ' UX Design / Code genius';
       email = 'carl@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
       break;
     default:
       description = 'Default description';
@@ -89,28 +134,14 @@ const DetailsPage: React.FC = () => {
     document.title = `Best Website | ${name}`;
   }, []);
 
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <>
-      <header
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {isSmallScreen ? <BlackMobileMenu /> : <BlackMenu />}
-      </header>{' '}
+      </header>
       <main>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Box
             sx={{
               textAlign: 'left',
@@ -139,19 +170,8 @@ const DetailsPage: React.FC = () => {
                 },
               }}
             >
-              <img
-                src="../../src/assets/arrowLeft.png"
-                alt="arrow"
-                style={{ height: '0.6rem' }}
-              />
-              <Typography
-                sx={{
-                  fontFamily: 'Raleway',
-                  fontSize: '15px',
-                }}
-              >
-                GO BACK
-              </Typography>
+              <img src="../../src/assets/arrowLeft.png" alt="arrow" style={{ height: '0.6rem' }} />
+              <Typography sx={{ fontFamily: 'Raleway', fontSize: isSmallScreen ? '11px' : '15px' }}>GO BACK</Typography>
             </Link>
           </Box>
           <Box
@@ -200,6 +220,9 @@ const DetailsPage: React.FC = () => {
                   fontFamily="'Raleway', sans-serif"
                   align="left"
                   gutterBottom
+                  sx={{
+                    fontSize: isSmallScreen ? '11px' : '15px',
+                  }}
                 >
                   {titles}
                   <br />
@@ -218,6 +241,7 @@ const DetailsPage: React.FC = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                   >
                     {phone}
+                    {personIcon}
                   </a>
                   <br />
                 </Typography>
@@ -258,6 +282,9 @@ const DetailsPage: React.FC = () => {
                 align="center"
                 maxWidth="600px"
                 gutterBottom
+                sx={{
+                  fontSize: isSmallScreen ? '11px' : '24px',
+                }}
               >
                 Thank you for your interest in our services!
                 <br /> <br />
@@ -300,6 +327,9 @@ const DetailsPage: React.FC = () => {
                 fontFamily="'Raleway', sans-serif"
                 align="left"
                 gutterBottom
+                sx={{
+                  fontSize: isSmallScreen ? '11px' : '20px',
+                }}
               >
                 {description}
               </Typography>
@@ -313,5 +343,6 @@ const DetailsPage: React.FC = () => {
     </>
   );
 };
+
 
 export default DetailsPage;
