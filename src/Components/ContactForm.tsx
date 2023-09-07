@@ -111,10 +111,12 @@ const ContactForm = () => {
                 width: '100%',
                 fontFamily: "'Raleway', sans-serif",
                 marginTop: '20px',
+                transition: 'all 0.15s',
                 '&:hover': {
                   backgroundColor: '#6C784E',
                   boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
                   borderRadius: '2rem',
+                  transition: 'all 0.15s',
                 },
               }}
             >
