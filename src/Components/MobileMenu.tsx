@@ -1,5 +1,7 @@
+import MenuIcon from '@mui/icons-material/Menu';
 import { Box, Button, Divider, Link, Menu, MenuItem } from '@mui/material';
 import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 
 export default function MobileMenu() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -9,6 +11,44 @@ export default function MobileMenu() {
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const navigateToContactSection = () => {
+    handleClose();
+    // First navigate to the homepage
+    const navigationEvent = new PopStateEvent('popstate');
+    window.history.pushState({}, '', '/');
+    window.dispatchEvent(navigationEvent);
+
+    // Add a slight delay to ensure that the HomePage component has rendered
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }, 100);
+  };
+
+  const navigateToTeamSection = () => {
+    handleClose();
+    // First navigate to the homepage
+    const navigationEvent = new PopStateEvent('popstate');
+    window.history.pushState({}, '', '/');
+    window.dispatchEvent(navigationEvent);
+
+    // Add a slight delay to ensure that the HomePage component has rendered
+    setTimeout(() => {
+      const contactSection = document.getElementById('team-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }, 100);
   };
 
   return (
@@ -31,11 +71,7 @@ export default function MobileMenu() {
     >
       <Box>
         <Link href="#" color="inherit" fontSize={'2rem'}>
-          <img
-            src="./src/assets/logoBright.png"
-            alt="logo"
-            style={{ height: '3.5rem' }}
-          />
+          <img src="./logoBright.png" alt="logo" style={{ height: '3.5rem' }} />
         </Link>
         <Divider
           orientation="vertical"
@@ -61,7 +97,7 @@ export default function MobileMenu() {
           fontWeight: '500',
         }}
       >
-        Menu
+        <MenuIcon />
       </Button>
       <Menu
         id="demo-positioned-menu"
@@ -83,13 +119,26 @@ export default function MobileMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
+        <MenuItem
+          component={RouterLink}
+          to="/"
+          onClick={navigateToTeamSection}
+          sx={{ fontFamily: 'Raleway' }}
+        >
           The team
         </MenuItem>
-        <MenuItem onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
+        <MenuItem
+          component={RouterLink}
+          to="/ProjectPage"
+          onClick={handleClose}
+          sx={{ fontFamily: 'Raleway' }}
+        >
           Portfolio
         </MenuItem>
-        <MenuItem onClick={handleClose} sx={{ fontFamily: 'Raleway' }}>
+        <MenuItem
+          onClick={navigateToContactSection}
+          sx={{ fontFamily: 'Raleway' }}
+        >
           Contact us
         </MenuItem>
       </Menu>

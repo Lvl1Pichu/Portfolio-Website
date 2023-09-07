@@ -4,7 +4,7 @@ import ContactForm from '../Components/ContactForm';
 import FindUsComponent from '../Components/FindUsComponent';
 import HeaderSection from '../Components/Header';
 import TeamSection from '../Components/TeamSection';
-import Footer from '../Components/footer';
+import Footer2 from '../Components/footer2';
 
 const HomePage: React.FC = () => {
   useEffect(() => {
@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
         </Container>
       </main>
       <footer>
-        <Footer />
+        <Footer2 />
       </footer>
     </div>
   );

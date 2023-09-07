@@ -1,3 +1,4 @@
+import MenuIcon from '@mui/icons-material/Menu';
 import {
   Box,
   Button,
@@ -29,6 +30,25 @@ export default function BlackMobileMenu() {
     // Add a slight delay to ensure that the HomePage component has rendered
     setTimeout(() => {
       const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }, 100);
+  };
+
+  const navigateToTeamSection = () => {
+    handleClose();
+    // First navigate to the homepage
+    const navigationEvent = new PopStateEvent('popstate');
+    window.history.pushState({}, '', '/');
+    window.dispatchEvent(navigationEvent);
+
+    // Add a slight delay to ensure that the HomePage component has rendered
+    setTimeout(() => {
+      const contactSection = document.getElementById('team-section');
       if (contactSection) {
         contactSection.scrollIntoView({
           behavior: 'smooth',
@@ -93,7 +113,7 @@ export default function BlackMobileMenu() {
           fontWeight: '500',
         }}
       >
-        Menu
+        <MenuIcon />
       </Button>
       <Menu
         id="demo-positioned-menu"
@@ -119,7 +139,7 @@ export default function BlackMobileMenu() {
         <MenuItem
           component={RouterLink}
           to="/"
-          onClick={handleClose}
+          onClick={navigateToTeamSection}
           sx={{ fontFamily: 'Raleway' }}
         >
           The team

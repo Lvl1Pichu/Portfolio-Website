@@ -6,15 +6,25 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import { useState } from 'react';
 
 const ContactForm = () => {
-  const [openSnackbar, setOpenSnackbar] = React.useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleClose = () => {
     setOpenSnackbar(false);
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setOpenSnackbar(true);
+    setName('');
+    setEmail('');
+    setMessage('');
+  };
   return (
     <Box id="contact-section">
       <Box
@@ -66,13 +76,15 @@ const ContactForm = () => {
           marginTop: '40px',
         }}
       >
-        <form>
+        <form onSubmit={handleSubmit}>
           <TextField
             variant="standard"
             label="Name"
             margin="normal"
             fullWidth
             id="name"
+            value={name}
+            onChange={e => setName(e.target.value)}
             sx={{ width: '100%' }}
             required
           />
@@ -84,6 +96,8 @@ const ContactForm = () => {
             fullWidth
             id="email"
             type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             required
           />
 
@@ -95,6 +109,8 @@ const ContactForm = () => {
             multiline
             rows={1}
             id="message"
+            value={message}
+            onChange={e => setMessage(e.target.value)}
             required
           />
 
@@ -102,7 +118,6 @@ const ContactForm = () => {
             <Button
               type="submit"
               variant="contained"
-              onSubmit={() => setOpenSnackbar(true)}
               sx={{
                 boxShadow: '0 .125rem .625rem rgba(0, 0, 0, 0.2)',
                 backgroundColor: '#51583F',
@@ -111,10 +126,12 @@ const ContactForm = () => {
                 width: '100%',
                 fontFamily: "'Raleway', sans-serif",
                 marginTop: '20px',
+                transition: 'all 0.15s',
                 '&:hover': {
                   backgroundColor: '#6C784E',
                   boxShadow: '0 .25rem 1.1rem rgba(0, 0, 0, 0.4)',
                   borderRadius: '2rem',
+                  transition: 'all 0.15s',
                 },
               }}
             >
