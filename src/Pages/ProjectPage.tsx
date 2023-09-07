@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BlackMenu from '../Components/BlackMenu';
 import BlackMobileMenu from '../Components/BlackMobileMenu';
 import Portfolio from '../Components/Portfolio';
-import Footer from '../Components/footer'; // Adjust the path as needed based on your project structure
+import Footer2 from '../Components/footer2';
 
 const ProjectPage: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -44,7 +44,7 @@ const ProjectPage: React.FC = () => {
         <Portfolio />
       </main>
       <footer>
-        <Footer />
+        <Footer2 />
       </footer>
     </>
   );
