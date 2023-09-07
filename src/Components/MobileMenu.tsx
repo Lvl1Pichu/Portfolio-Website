@@ -1,3 +1,4 @@
+import MenuIcon from '@mui/icons-material/Menu';
 import { Box, Button, Divider, Link, Menu, MenuItem } from '@mui/material';
 import { useState } from 'react';
 
@@ -61,7 +62,7 @@ export default function MobileMenu() {
           fontWeight: '500',
         }}
       >
-        Menu
+        <MenuIcon />
       </Button>
       <Menu
         id="demo-positioned-menu"
