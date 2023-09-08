@@ -42,6 +42,7 @@ const ContactForm = () => {
             onChange={e => setName(e.target.value)}
             sx={{ width: '100%' }}
             required
+            autoFocus
           />
 
           <TextField
@@ -69,7 +70,13 @@ const ContactForm = () => {
             required
           />
 
-          <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: "2rem" }}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '2rem',
+            }}
+          >
             <Button
               type="submit"
               variant="contained"
