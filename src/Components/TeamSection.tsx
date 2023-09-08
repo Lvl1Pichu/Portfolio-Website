@@ -438,11 +438,11 @@ function TeamSection() {
                 },
               }}
             >
-              Meet Linus: a passionate UX enthusiast, TypeScript aficionado, and
-              a loyal dog lover. With a flair for user-centric design and code
-              precision, he finds joy in every wagging tail and pixel-perfect
-              interface. Dive into his world where creativity meets canine
-              companionship.
+              Dive into Linus's digital universe: a TypeScript virtuoso and a
+              maestro of Bootstrap techniques. His approach to extreme coding is
+              rivaled only by his devotion to his dog. With every line of code,
+              he brings a blend of precision and passion, echoing the bond he
+              shares with his canine companion.
             </Box>
           </Box>
           <Link

@@ -12,12 +12,15 @@ import BlackMenu from '../Components/BlackMenu';
 import BlackMobileMenu from '../Components/BlackMobileMenu';
 import ContactFormDetail from '../Components/ContactFormDetail';
 import Footer2 from '../Components/footer2';
+import { FaReact, FaSwift, FaFigma, FaSass } from 'react-icons/fa';
 
 const DetailsPage: React.FC = () => {
   interface PersonDetailParams {
     [key: string]: string | undefined;
     name: string;
   }
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { name } = useParams<PersonDetailParams>();
   let descriptionSection1 = '';
@@ -26,6 +29,7 @@ const DetailsPage: React.FC = () => {
   let titles = '';
   let email = '';
   let phone = '';
+  let personIcon = null;
 
   switch (name) {
     case 'Nathalie':
@@ -44,6 +48,14 @@ const DetailsPage: React.FC = () => {
       titles = 'Creative lead/Code genius';
       email = 'nathalie@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
       break;
 
     case 'Jenny':
@@ -63,6 +75,14 @@ const DetailsPage: React.FC = () => {
       titles = 'Creative lead/ UX Design';
       email = 'jenny@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
       break;
 
     case 'Sebastian':
@@ -80,6 +100,14 @@ const DetailsPage: React.FC = () => {
       titles = ' UX Design / Code genius';
       email = 'sebastian@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
       break;
 
     case 'Linus':
@@ -97,6 +125,15 @@ const DetailsPage: React.FC = () => {
       titles = 'Creative lead/  Code genius';
       email = 'linus@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
+
       break;
 
     case 'Carl':
@@ -114,6 +151,14 @@ const DetailsPage: React.FC = () => {
       titles = ' UX Design / Code genius';
       email = 'carl@bestwebsite.com';
       phone = '+461234567';
+      personIcon = (
+        <Box sx={{ marginTop: isSmallScreen ? '2rem' : '5.5rem', display: 'flex', justifyContent: 'space-between'}}>
+          <FaReact size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSwift size={isSmallScreen ? '25px' : '30px'}/>
+          <FaFigma size={isSmallScreen ? '25px' : '30px'}/>
+          <FaSass size={isSmallScreen ? '25px' : '30px'}/>
+        </Box>
+      );
       break;
 
     default:
@@ -126,20 +171,12 @@ const DetailsPage: React.FC = () => {
     document.title = `Best Website | ${name}`;
   }, []);
 
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <>
-      <header
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {isSmallScreen ? <BlackMobileMenu /> : <BlackMenu />}
-      </header>{' '}
+      </header>
       <main>
         <Box
           sx={{
@@ -237,6 +274,9 @@ const DetailsPage: React.FC = () => {
                   fontFamily="'Raleway', sans-serif"
                   align="left"
                   gutterBottom
+                  sx={{
+                    fontSize: isSmallScreen ? '11px' : '15px',
+                  }}
                 >
                   {titles}
                   <br />
@@ -255,6 +295,7 @@ const DetailsPage: React.FC = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                   >
                     {phone}
+                    {personIcon}
                   </a>
                   <br />
                 </Typography>
@@ -378,5 +419,6 @@ const DetailsPage: React.FC = () => {
     </>
   );
 };
+
 
 export default DetailsPage;
