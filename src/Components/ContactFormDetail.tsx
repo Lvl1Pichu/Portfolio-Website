@@ -69,7 +69,7 @@ const ContactForm = () => {
             required
           />
 
-          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: "2rem" }}>
             <Button
               type="submit"
               variant="contained"

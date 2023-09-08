@@ -56,7 +56,7 @@ const ContactForm = () => {
       </Box>
 
       <Typography
-        variant="h5"
+        fontSize="20px"
         fontFamily="'Raleway', sans-serif"
         align="center"
         gutterBottom
@@ -114,7 +114,13 @@ const ContactForm = () => {
             required
           />
 
-          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '2rem',
+            }}
+          >
             <Button
               type="submit"
               variant="contained"
